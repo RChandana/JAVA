@@ -77,8 +77,9 @@ public class DataTypes {
        long d = 37247346387463L;
        float e = 61.9f;
        double f = 56.98d;
+       char Grades ='A';
        
-       System.out.println(a+"   "+b+"   "+c+"   "+d+"   "+e+"   "+f);
+       System.out.println(a+"   "+b+"   "+c+"   "+d+"   "+e+"   "+f+"   "+Grades);
        
     }
 }
@@ -97,10 +98,18 @@ public class Boolean {
 
 
 
+
+
 // CASTING
 // Type casting is a way of converting data from one data type to another data type.
 // In Java, we can cast both reference and primitive data types. By using casting, data can not be changed but only the data type is changed. 
 // Note: type casting is not possible for a Boolean data type.
+
+/*Widening Casting (automatically) - converting a smaller type to a larger type size
+byte -> short -> char -> int -> long -> float -> double
+
+Narrowing Casting (manually) - converting a larger type to a smaller size type
+double -> float -> long -> int -> char -> short -> byte */
 
 public class TestWide {
     public static void main(String args[]) {
@@ -108,7 +117,7 @@ public class TestWide {
         char y='h';
         int a='a' ;
         long b=34 ;
-        float c=109 ;
+        float c=b ;
         double d=3.458D ;
         System.out.println(x+"   "+a+"   "+b+"   "+c+"   "+d+"   "+y);
     }

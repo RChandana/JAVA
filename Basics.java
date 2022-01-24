@@ -98,8 +98,6 @@ public class Boolean {
 
 
 
-
-
 // CASTING
 // Type casting is a way of converting data from one data type to another data type.
 // In Java, we can cast both reference and primitive data types. By using casting, data can not be changed but only the data type is changed. 
@@ -125,4 +123,28 @@ public class TestWide {
 
 
 
+// ARITHEMATIC OPERATORS
+
+public class Arithmetic {
+  public static void main(String[ ] args) {
+    int x=12;
+    int y=2*x;
+    System.out.println(y);
+    int z=(y-x)%5;
+    System.out.println(z);
+    final float pi=3.1415F;
+    float f=pi/0.62F;
+    System.out.println(f);
+  }
+}
+
 //
+public class ShortHand {
+  public static void main(String[ ] args) {
+    int x=12;
+    x+=5;
+    System.out.println(x);
+    x*=2;
+    System.out.println(x);
+  }
+}

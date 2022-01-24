@@ -22,7 +22,7 @@ char - stores single characters, such as 'a' or 'B'. Char values are surrounded 
 boolean - stores values with two states: true or false */
 
 // #1
-public class HelloWorld {
+public class Variables {
     public static void main(String args[]) {
         String a= "value";
         char b='b';
@@ -32,7 +32,7 @@ public class HelloWorld {
 }
 
 // #2
-public class HelloWorld {
+public class Variables {
     public static void main(String args[]) {
         int Num = 100;
         Num = 200; 
@@ -46,7 +46,7 @@ public class HelloWorld {
 // Constants are declared with the word "final" in front.
 // The specification of the intial value is compulsory.
 
-public class HelloWorld {
+public class Constants {
     public static void main(String args[]) {
        final int Num = 5;
        Num = 10;
@@ -68,6 +68,33 @@ public class HelloWorld {
 // boolean, void and string
 
 // Even though there are many numeric types in Java, the most used for numbers are int (for whole numbers) and double (for floating point numbers).
+
+public class DataTypes {
+    public static void main(String args[]) {
+       byte a = 10;
+       short b = 5;
+       int c = 45;
+       long d = 37247346387463L;
+       float e = 61.9f;
+       double f = 56.98d;
+       
+       System.out.println(a+"   "+b+"   "+c+"   "+d+"   "+e+"   "+f);
+       
+    }
+}
+
+// Boolean
+public class Boolean {
+    public static void main(String args[]) {
+       boolean isTrue = true;
+       boolean isFalse = false;
+       System.out.println(isTrue);   
+       System.out.println(isFalse); 
+       
+    }
+}
+
+
 
 
 // CASTING

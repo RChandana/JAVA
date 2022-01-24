@@ -21,6 +21,7 @@ float - stores floating point numbers, with decimals, such as 19.99 or -19.99
 char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes
 boolean - stores values with two states: true or false */
 
+// #1
 public class HelloWorld {
     public static void main(String args[]) {
         String a= "value";
@@ -29,6 +30,42 @@ public class HelloWorld {
         System.out.println(a+"  "+b+"  "+x);
     }
 }
+
+// #2
+public class HelloWorld {
+    public static void main(String args[]) {
+        int Num = 100;
+        Num = 200; 
+        System.out.println(Num);
+    }
+}
+
+
+
+// CONSTANTS
+// Constants are declared with the word "final" in front.
+// The specification of the intial value is compulsory.
+
+public class HelloWorld {
+    public static void main(String args[]) {
+       final int Num = 5;
+       Num = 10;
+       System.out.println(Num);
+    }
+}
+
+// ERROR:  HelloWorld.java:4: error: cannot assign a value to final variable Num
+       //Num = 10;
+       //^
+//1 error
+
+
+
+// FUNDAMENTAL DATA TYPES
+// Integer: byte, short, int, and long
+// Floating Point: float and doulbe
+// Characters: char
+// boolean, void and string
 
 
 

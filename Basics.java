@@ -67,6 +67,7 @@ public class HelloWorld {
 // Characters: char
 // boolean, void and string
 
+// Even though there are many numeric types in Java, the most used for numbers are int (for whole numbers) and double (for floating point numbers).
 
 
 // CASTING

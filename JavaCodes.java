@@ -44,3 +44,21 @@ public class Main {
 	        else System.out.println("The largest number is: "+c);
 	}
 }
+
+
+//
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+         int a;
+	     Scanner sc = new Scanner(System.in);  
+         System.out.println("Enter the number:"); 
+         a = sc.nextInt();  {
+             if  (a%2==1 || a==2) 
+                 System.out.println("The given number is a prime number.");
+             else System.out.println("The given number is not a prime number.");
+             
+         }
+    }
+}

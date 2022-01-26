@@ -65,6 +65,8 @@ public class Main {
 
 
 // Verify if the given number is a prime number or not.
+// Note: To make it more optimistic so that the code does not execute (a-2) times 
+// we can just put the range of j from 2 to a/2 as there won't be any number divisible by a after a/2.
 
 import java.util.Scanner;
 public class Main {

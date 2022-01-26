@@ -46,7 +46,7 @@ public class Main {
 }
 
 
-//
+// Verify if a number is a odd number or an even number.
 
 import java.util.Scanner;
 public class Main {
@@ -62,3 +62,33 @@ public class Main {
          }
     }
 }
+
+
+// Verify if the given number is a prime number or not.
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+         int a,j;
+         boolean prime=true;
+	     Scanner sc = new Scanner(System.in);  
+         System.out.println("Enter the number:"); 
+         a = sc.nextInt();
+         if (a==1)
+         System.out.println("The given number is not a prime number.");
+         else {
+             for (j=2;j<a;j++) {
+                 if (a%j==0){
+                     prime=false;
+                     System.out.println("The given number is not a prime number.");
+                     break;
+                 }
+                
+             }
+             if (prime==true)
+                 System.out.println("The given number is a prime number.");
+         }
+             
+             }     
+             
+        }

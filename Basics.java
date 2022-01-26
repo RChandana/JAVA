@@ -153,6 +153,44 @@ public class ShortHand {
 
 
 // CONTROL STATEMENTS
+
 // If-else statements
+ public class Main {
+    public static void main (String[] args) {
+        char c= 'a';
+        if ((c>='a' && c<='z') || (c>='A' && c<='Z')) 
+            System.out.println("The letter is: "+c);
+            
+            else if (c>=0 && c<=9) 
+            System.out.println("the digit is: "+c);
+              
+              else {
+              System.out.println("The given input "+ c + " is not a letter");
+              System.out.println("Nor it's a digit");
+              }
+        
+    }
+}
+
+// While Loop
+
+public class Main {
+    public static void main(String[] args) {
+        final float InitialValue=2.34F;
+        final float step=0.11F;
+        final float limit=4.69f;
+        float var =InitialValue;
+        
+        int counter=0;
+        while (var<limit){
+            var+=step;
+            counter++;
+        }
+        System.out.println("Incremented by " + counter+" times");
+        
+    }
+}
+
 
 // 
+

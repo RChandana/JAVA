@@ -192,5 +192,23 @@ public class Main {
 }
 
 
-// 
+// For Loop
+
+public class Main {
+    public static void main(String[] args) {
+        final float InitialValue=2.34F;
+        final float step=0.11F;
+        final float limit=4.69f;
+        int counter=0;
+        
+        for (float var = InitialValue ; var < limit ; var += step)
+        counter++;
+        System.out.println("Incremented by " + counter + " times.");
+        
+    }
+}
+
+
+
+// Do-While Loop
 

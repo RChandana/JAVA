@@ -193,7 +193,19 @@ public class Main {
 
 
 // For Loop
+// The for loop in Java is an entry controlled loop that allows a user to execute a block of a statement(s) repeatedly 
+// with a fixed number of times on the basis of the test expression or test-condition.
 
+// Statement 1 is executed (one time) before the execution of the code block.
+// Statement 2 defines the condition for executing the code block.
+// Statement 3 is executed (every time) after the code block has been executed.
+
+// Example-
+for (int i = 0; i < 5; i++) {
+  System.out.println(i);
+}
+
+// Code-
 public class Main {
     public static void main(String[] args) {
         final float InitialValue=2.34F;
@@ -224,3 +236,6 @@ public class Main {
         System.out.println(x);
     }
 }
+
+
+// 

@@ -1,4 +1,5 @@
 // JAVA
+
 // Every Java program has a class name which must match the filename, and every program must contain the main() method.
 // The curly braces {} marks the beginning and the end of a block of code.
 // Each code statement must end with a semicolon.
@@ -11,6 +12,8 @@ public class HelloWorld {
         System.out.println("Hello World");
     }
 }
+
+
 
 
 
@@ -43,6 +46,8 @@ public class Variables {
 
 
 
+
+
 // CONSTANTS
 // Constants are declared with the word "final" in front.
 // The specification of the intial value is compulsory.
@@ -59,6 +64,8 @@ public class Constants {
        //Num = 10;
        //^
 //1 error
+
+
 
 
 
@@ -85,6 +92,9 @@ public class DataTypes {
     }
 }
 
+
+
+
 // Boolean
 public class Boolean {
     public static void main(String args[]) {
@@ -95,6 +105,7 @@ public class Boolean {
        
     }
 }
+
 
 
 
@@ -121,6 +132,9 @@ public class TestWide {
         System.out.println(x+"   "+a+"   "+b+"   "+c+"   "+d+"   "+y);
     }
 }
+
+
+
 
 
 
@@ -152,6 +166,8 @@ public class ShortHand {
 
 
 
+
+
 // CONTROL STATEMENTS
 
 // If-else statements
@@ -172,6 +188,9 @@ public class ShortHand {
     }
 }
 
+
+
+
 // While Loop
 
 public class Main {
@@ -190,6 +209,8 @@ public class Main {
         
     }
 }
+
+
 
 
 // For Loop
@@ -222,6 +243,8 @@ public class Main {
 
 
 
+
+
 // Do-While Loop
 // The do/while loop is a variant of the while loop. 
 // This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
@@ -238,7 +261,10 @@ public class Main {
 }
 
 
+
+
 // Arrays
+
 // Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
 //To declare an array, define the variable type with square brackets:
 String[] items;
@@ -258,3 +284,16 @@ System.out.println(items.length);
 // To create a two-dimensional array, add each array within its own set of curly braces:
 
 int[][] Num = { {1, 2, 3, 4}, {5, 6, 7} };
+
+// We can also use a for loop inside another for loop to get the elements of a two-dimensional array (we still have to point to the two indexes):
+
+public class Main {
+  public static void main(String[] args) {
+    int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+    for (int i = 0; i < myNumbers.length; ++i) {
+      for(int j = 0; j < myNumbers[i].length; ++j) {
+        System.out.println(myNumbers[i][j]);
+      }
+    }
+  }
+}

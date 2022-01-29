@@ -251,5 +251,10 @@ String[] items = {"Table", "Chair", "Car", "Book"};
 // To access an array element refer to the index number.
 System.out.println(items[2]);
 
+// To find out how many elements an array has, use the length property:
+System.out.println(items.length);
 
+//A multidimensional array is an array of arrays.
+// To create a two-dimensional array, add each array within its own set of curly braces:
 
+int[][] Num = { {1, 2, 3, 4}, {5, 6, 7} };

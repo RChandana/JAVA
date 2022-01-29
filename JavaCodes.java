@@ -84,13 +84,11 @@ public class Main {
                      prime=false;
                      System.out.println("The given number is not a prime number.");
                      break;
-                 }
+                }
                 
-             }
+            }
              if (prime==true)
                  System.out.println("The given number is a prime number.");
-         }
-             
-             }     
-             
         }
+    }     
+}

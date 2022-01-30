@@ -18,10 +18,11 @@
   - Method Signature
   - Method Body 
 
+
 1) Access Specifiers:
 
-   It is used to define the access type of the method. The above syntax sees the use of the “public” access specifier. 
-   However, Java provides four different specifiers, which are:
+It is used to define the access type of the method. The above syntax sees the use of the “public” access specifier. 
+However, Java provides four different specifiers, which are:
 
 - Public: You can access it from any class.
 - Private: You can access it within the class where it is defined.

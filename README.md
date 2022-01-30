@@ -21,7 +21,7 @@
 
   
 Example-
-```java: 
+``` 
 public class Main {
     public int sumOfNumbers(int a, int b) {
         int addition=a+b;
@@ -72,12 +72,12 @@ You can also keep it blank if you don’t want to use any parameters in the meth
 5) Method Signature:
 
 The method signature is just a combination of the method name and parameter list.
-Here ```java:sumOfNumbers(int a, int b)``` is the method signature.
+Here ```sumOfNumbers(int a, int b)``` is the method signature.
 
 
 6) Method Body:
 
-```java: 
+``` 
 {
 int addition = a+b;
 return addition;

@@ -17,6 +17,23 @@
   - Parameter List
   - Method Signature
   - Method Body 
+  
+Example-
+```java: 
+public class Main {
+    public int sumOfNumbers(int a, int b) {
+        int addition=a+b;
+        return addition;
+    }
+    public static void main (String[] args) {
+        int x=100;
+        int y=200;
+        Main obj=new Main();
+        int Sum=obj.sumOfNumbers(x,y);
+        System.out.println("The sum of the given numbers is: "+Sum);
+    }
+}
+```
 
 
 1) Access Specifiers:

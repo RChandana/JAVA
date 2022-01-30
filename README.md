@@ -79,7 +79,7 @@ Here ```java:sumOfNumbers(int a, int b)``` is the method signature.
 
 ```java: 
 {
-int addition = x + y;
+int addition = a+b;
 return addition;
 }
 ```

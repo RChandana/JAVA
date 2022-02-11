@@ -92,3 +92,86 @@ public class Main {
         }
     }     
 }
+
+
+
+// Create a Constructor Class for the student class. 
+// The constructor should be described with Name, Registration No., Internal Marks1, Internal Marks2, Internal Marks3. 
+// Write a program that overloads the constructor by initiating the objects and displaying the initial vlaues.
+
+import java.lang.*;
+class Main{
+    String regNo;
+    String stuName;
+    int intMarks1;
+    int intMarks2;
+    int intMarks3;
+    Main(){
+        regNo = "21BCE8718";
+        stuName = "R.Hari Chandana";
+        intMarks1=87;
+        intMarks2=44;
+        intMarks3=55;
+    }
+    Main(String a,String b,int c,int d,int e){
+        regNo = a;
+        stuName = b;
+        intMarks1=c;
+        intMarks2=d;
+        intMarks3=e;
+        
+    }
+    void display(){
+        System.out.println(regNo);
+        System.out.println(stuName);
+        System.out.println(intMarks1);
+        System.out.println(intMarks2);
+        System.out.println(intMarks3);
+        
+    }
+    public static void main(String args[]){
+        Main s1 = new Main();
+        Main s2= new Main("21BCE8718" , "R.Hari Chandana " , 99 , 76 , 90);
+        s1.display();
+        s2.display();
+       }
+   }
+
+
+
+// Write a Java program that reads 15 numbers and returns Positive Numbers, Negative Numbers and Zeroes
+
+import java.util.Scanner;
+public class Main
+{
+  public static void main(String[] args) 
+  {
+    //R.Hari Chandana 21BCE8718
+    int Size, i;
+    Scanner sc = new Scanner(System.in);
+    System.out.print(" Please Enter Number of elements in an array : ");
+    Size =sc.nextInt();  
+    int [] a = new int[Size];
+    System.out.print(" Please Enter " + Size + " elements of an Array  : ");
+    for (i = 0; i < Size; i++)
+    {
+      a[i] =sc.nextInt();
+    }   
+    for(i = 0; i < Size; i++)
+    {
+      if(a[i] > 0)
+      {
+        System.out.println("Positive Number:"+a[i]);
+      }
+      else if (a[i]<0)
+      {
+        System.out.println("Negative Number:"+a[i]);
+      }
+      else
+        {
+            System.out.println(a[i]+" is Zero");
+        }
+
+    }  
+  }
+}

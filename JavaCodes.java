@@ -146,7 +146,6 @@ public class Main
 {
   public static void main(String[] args) 
   {
-    //R.Hari Chandana 21BCE8718
     int Size, i;
     Scanner sc = new Scanner(System.in);
     System.out.print(" Please Enter Number of elements in an array : ");

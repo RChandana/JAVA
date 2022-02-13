@@ -21,7 +21,7 @@
 
   
 Example-
-``` 
+```java
 public class Main {
     public int sumOfNumbers(int a, int b) {
         int addition=a+b;
@@ -77,7 +77,7 @@ Here ```sumOfNumbers(int a, int b)``` is the method signature.
 
 6) Method Body:
 
-``` 
+```java
 {
 int addition = a+b;
 return addition;

@@ -2,7 +2,7 @@
 
 ### Methods
 
- A method in Java is a block of code that, when called, performs specific actions mentioned in it
+ A method in Java is a block of code that, when called, performs specific actions mentioned in it.
  You can insert values or parameters into methods, and they will only be executed when called. 
  They are also referred to as functions. The primary uses of methods in Java are:
 

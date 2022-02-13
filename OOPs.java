@@ -22,3 +22,16 @@ public class Main{
   }
 }
 
+
+// The new operator dynamically allocates (that is, allocates at run time) memory for an object and returns a reference to it.
+// This reference is, more or less, the address in memory of the object allocated by new.
+
+
+/* When you assign one object reference variable to another object reference variable,
+you are not creating a copy of the object, you are only making a copy of the reference.*/
+Box b1 = new Box();
+Box b2 = b1;
+b1 = null;
+
+
+// 

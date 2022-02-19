@@ -1,4 +1,4 @@
-// JAVA
+//JAVA
 
 // Every Java program has a class name which must match the filename, and every program must contain the main() method.
 // The curly braces {} marks the beginning and the end of a block of code.

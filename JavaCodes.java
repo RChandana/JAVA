@@ -187,7 +187,8 @@ public class Main{
         Scanner sc=new Scanner(System.in);  
         System.out.print("Enter a number: ");  
         number=sc.nextLong();  
-        for(sum=0; number!=0; number=number/10) {  
+        for(sum=0; number!=0; 
+	number=number/10) {  
             sum = sum + number % 10;  
             
         } 
@@ -216,13 +217,23 @@ import java.lang.*; public class Student{
 		address = stuAddress;
 	}
 	public void main() {
-		System.out.println("Name: " + name); System.out.println("RegNo:" + regNo); System.out.println("Address:" + address);
+		System.out.println("Name: " + name); 
+		System.out.println("RegNo:" + regNo); 
+		System.out.println("Address:" + address);
 	}
 	public static void main(String args[]) {
-		Student StuOne = new Student("Chandana"); Student StuTwo = new Student("Sanjana"); Student StuThree = new Student("Shreya");
-		StuOne.setRegNo("21BCEXXXX"); StuTwo.setRegNo("21BCEXXXX"); StuThree.setRegNo("21BCEXXXX");
-		StuOne.setAddress("A"); StuTwo.setAddress("B"); StuThree.setAddress("C");
-		StuOne.main(); StuTwo.main(); StuThree.main();
+		Student StuOne = new Student("Chandana"); 
+		Student StuTwo = new Student("Sanjana"); 
+		Student StuThree = new Student("Shreya");
+		StuOne.setRegNo("21BCEXXXX"); 
+		StuTwo.setRegNo("21BCEXXXX"); 
+		StuThree.setRegNo("21BCEXXXX");
+		StuOne.setAddress("A"); 
+		StuTwo.setAddress("B"); 
+		StuThree.setAddress("C");
+		StuOne.main(); 
+		StuTwo.main(); 
+		StuThree.main();
 	}
 }
 
@@ -244,10 +255,14 @@ Write a main() method that tests all three overloaded methods. Save the applicat
 
 
 public class Billing {
-	private float photobookprice=0; private int photobooks = 1;
-        private final int taxpercent = 8; private float couponValuePercent=0; private float totalDue=0;
+	private float photobookprice=0; 
+	private int photobooks = 1;
+        private final int taxpercent = 8; 
+	private float couponValuePercent=0; 
+	private float totalDue=0;
         public Billing(float photobookprice) { 
-		this.photobookprice = photobookprice; totalDue = calculateOneBookPrice();
+		this.photobookprice = photobookprice; 
+		totalDue = calculateOneBookPrice();
   }
 	public Billing(float photobookprice, int photobooks) { 
 		this(photobookprice);
@@ -270,8 +285,11 @@ public class Billing {
 	}
 	public static void main(String[] args) {
 		Billing bill1 = new Billing(250);
-		Billing bill2 = new Billing(250,4); Billing bill3 = new Billing(250,12,2.5f);
-		System.out.println(bill1.toString()); System.out.println(bill2.toString()); System.out.println(bill3.toString());
+		Billing bill2 = new Billing(250,4); 
+		Billing bill3 = new Billing(250,12,2.5f);
+		System.out.println(bill1.toString()); 
+		System.out.println(bill2.toString()); 
+		System.out.println(bill3.toString());
 	}
 	public float getTotalDue() { 
 		return totalDue;

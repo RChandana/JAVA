@@ -401,3 +401,69 @@ class OutputPayment{
     }
 }	
 	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+// Array of Objects	
+	
+	
+import java.util.*;
+class Bank
+{
+   String name;
+   int account_no;
+   String account_type;
+   double amount;
+   Bank(String n, int no, String t, double a)
+   {
+       name=n;
+       account_no=no;
+       account_type=t;
+       amount=a;
+   }
+   public void display()
+   {
+       System.out.println("Name: "+name);
+       System.out.println("Account Number: "+account_no);
+       System.out.println("Account Type: "+account_type);
+       System.out.println("Amount: "+amount);  
+   }
+   public static void main(String args[])
+   {
+       Scanner sc=new Scanner(System.in);
+       int accType,account_no;
+       String name, account_type="";
+       double amount;
+       Bank customer[]=new Bank[4];
+       for(int i=0;i<4;i++)
+       {
+           System.out.print("Enter name of customer "+(i+1)+": ");
+           name=sc.nextLine();
+           System.out.print("Enter account number of customer "+(i+1)+": ");
+           account_no=sc.nextInt();
+           System.out.print("Slect account_type of customer "+(i+1)+", 1 for savings and 2 for current: ");
+           accType=sc.nextInt();
+           if(accType==1)
+               account_type="Savings";
+           else if(accType==2)
+               account_type="Current";
+           System.out.print("Enter amount of customer "+(i+1)+": ");
+           amount=sc.nextDouble();
+           customer[i]=new Bank(name,account_no,account_type,amount);
+       }
+       for(int i=0;i<4;i++)
+           customer[i].display();
+   }
+}	
+	
+	
+	

@@ -466,4 +466,64 @@ class Bank
 }	
 	
 	
+
 	
+	
+	
+	
+	
+	
+	
+	
+	
+// Player Record Problem
+
+	
+public class PlayerRecord {
+    // private data members
+    private String name;
+    private int age;
+    private double salary;
+
+    // constructor to initialize data members
+    public PlayerRecord(String name, int age, double salary) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+    }
+
+    // setter method
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // getter method
+    public String getName() {
+        return name;
+    }
+
+    // setter method
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    // getter method
+    public int getAge() {
+        return age;
+    }
+
+    // setter method
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    // getter method
+    public double getSalary() {
+        return salary;
+    }
+
+    // toString() method to display data members
+    public String toString() {
+        return "Name: " + name + "Age: " + age + "Salary: " + salary;
+    }
+}

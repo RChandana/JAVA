@@ -216,4 +216,59 @@ Find the name of the player whose salary is highest. Imagine a single highest pa
 
 
 
+public class PlayerRecord {
+    
+    private String name;
+    private int age;
+    private double salary;
 
+    public PlayerRecord(String name, int age, double salary) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+    public int getAge() {
+        return age;
+    }
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+    public double getSalary() {
+        return salary;
+    }
+    public String toString() {
+        return "Name: " + name + "Age: " + age + "Salary: " + salary;
+    }
+}
+public class Club {
+    public static void main(String[] args) {
+        
+        PlayerRecord[] players = new PlayerRecord[5];
+
+        players[0] = new PlayerRecord("Chandana", 18, 100000);
+        players[1] = new PlayerRecord("Priya", 22, 75000);
+        players[2] = new PlayerRecord("Deepika", 23, 80000);
+        players[3] = new PlayerRecord("Shriya", 16, 760000);
+        players[4] = new PlayerRecord("Sanjana", 21, 830000);
+        System.out.println("Players details:");
+        System.out.println("--------------------------------------------------");
+        for (int i = 0; i < players.length; i++)
+            System.out.println(players[i]);
+        int max = 0;
+
+        for (int i = 0; i < players.length; i++) {
+            if (players[i].getSalary() > players[max].getSalary())
+                max = i;
+        }
+        System.out.println("Highest Paid Player : " + players[max].getName());
+
+    }

@@ -187,4 +187,33 @@ class OutputPayment{
         System.out.println();
     }
 }	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Imagine you are maintaining personal data of all the players in your club.
+Three personal data namely name, age, and individual salary are the parameters which you are maintaining.
+You have kept those data as private to a particular class named PlayerRecords.
+However, you have also kept some provisions for the club owner to set and access those private data.
+Write a java code fulfilling the above criteria to implement the scenario and display name, age, and their individual salary. 
+Be sure to get the accessibility right.
+Find the name of the player whose salary is highest. Imagine a single highest paid player is there in the team.
+
+[Hints: “some provisions” means some methods with proper access modifiers. Club owner is accessing those data from main method of another class.]*/
+
+
+
+

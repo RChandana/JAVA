@@ -73,3 +73,118 @@ public class Billing {
 		return "PhotoBookPrice=" + photobookprice + "\n" + " PhotoBooks="+ photobooks + "\n" + "CouponValuePercent=" + couponValuePercent + "\n" + "TotalDue="+ totalDue ;
 } 
 }
+
+
+
+
+
+
+
+
+
+
+/*•Define a class named Payment that contains a member variable of type double that stores the amount of the payment and appropriate accessor and mutator methods.
+Also create a method named paymentDetails that outputs an English sentence to describe the amount of the payment.
+  
+•Next, define a class named CashPayment that is derived from Payment.  
+This class should redefine the paymentDetails method to indicate that the payment is in cash.  Include appropriate constructor(s).
+  
+•Define a class named CreditCardPayment that is derived from Payment.  
+This class should contain member variables for the name on the card, expiration date, and credit card number.  Include appropriate constructor(s). 
+Finally, redefine the paymentDetails method to include all credit card information in the printout.
+  
+•Create a main method that creates at least two CashPayment and two CreditCardPayment objects with different values and calls paymentDetails for each.*/	
+
+	
+	
+	
+	
+class Payment{
+    private double amount;
+    public Payment( ){
+        amount = 0;
+    }
+    public Payment(double amount){
+        this.amount = amount;
+    }
+    public void setPayment(double amount){
+        this.amount = amount;
+    }
+    public double getPayment( ){
+    return amount;
+    }
+    public void paymentDetails( ){
+        System.out.println("Payment amount : " + amount);
+    }
+}
+class CashPayment extends Payment{
+    public CashPayment( ){
+        super( );
+    }
+    public CashPayment(double amt){
+        super(amt);
+    }
+    public void paymentDetails( ){
+        System.out.println("Payment amount : "+ getPayment( ));
+    }
+}
+class CreditCardPayment extends Payment{
+    private String name;
+    private String expiration;
+    private String creditcard;
+    public CreditCardPayment(){
+        super( );
+        name = " ";
+        expiration = " ";
+        creditcard = "";
+    }
+    public CreditCardPayment(double amt, String name, String expiration, String creditcard){
+        super(amt);
+        this.name = name;
+        this.expiration = expiration;
+        this.creditcard = creditcard;
+    }
+    public void paymentDetails( ){
+        System.out.println("Credit card payment amount :  " + getPayment( ));
+        System.out.println("Name on the Card : " + name);
+        System.out.println("Expiration Date : " + expiration);
+        System.out.println("Card Number : " + creditcard);
+    }
+}
+class OutputPayment{
+    public static void main(String[ ] args){
+        CashPayment cash1 = new CashPayment(1000), cash2 = new CashPayment(200), cash3 = new CashPayment(500);
+        
+        CreditCardPayment credit1 = new CreditCardPayment(100, "Chandana" , "09/04/2030" , "1111111111");
+        
+        CreditCardPayment credit2 = new CreditCardPayment(50 , "Tina", "03/11/2025" , "999999999");
+        
+        CreditCardPayment credit3 = new CreditCardPayment(150 , "Cherry", "03/02/2028" , "555555555");
+        
+        
+        System.out.println("1st User Cash Details:");
+        cash1.paymentDetails( );
+        System.out.println();
+        
+        System.out.println("2nd User Cash Details:");
+        cash2.paymentDetails( );
+        System.out.println();
+        
+        System.out.println("3rd User Cash Details:");
+        cash3.paymentDetails( );
+        System.out.println();
+        
+        System.out.println("1st User Credit Details:");
+        credit1.paymentDetails( );
+        System.out.println();
+        
+        System.out.println("2nd User Credit Details:");
+        credit2.paymentDetails( );
+        System.out.println();
+        
+        System.out.println("3rd User Credit Details:");
+        credit3.paymentDetails( );
+        System.out.println();
+    }
+}	
+	

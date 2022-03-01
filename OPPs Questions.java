@@ -246,12 +246,11 @@ class PlayerRecord {
         return salary;
     }
     public String toString() {
-        return "\n"+"Name: " + name+"\n" + "Age: " + age+"\n" + "Salary: " + salary+"\n";
+        return "\n"+"Name: " + name+ "\n" + "Age: " + age+ "\n" + "Salary: " + salary+ "\n"+ "\n";
     }
 }
 class Club {
     public static void main(String[] args) {
-        
         PlayerRecord[] players = new PlayerRecord[5];
 
         players[0] = new PlayerRecord("Chandana", 18, 100000);
@@ -261,14 +260,12 @@ class Club {
         players[4] = new PlayerRecord("Sanjana", 21, 83000);
         System.out.println("Players details:"+"\n");
         for (int i = 0; i < players.length; i++)
-            System.out.println(players[i]);
+        System.out.println(players[i]);
         int max = 0;
-
         for (int i = 0; i < players.length; i++) {
             if (players[i].getSalary() > players[max].getSalary())
                 max = i;
         }
         System.out.println("Highest Paid Player : " + players[max].getName());
-
     }
 }

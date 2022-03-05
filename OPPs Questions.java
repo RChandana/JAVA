@@ -196,14 +196,6 @@ class OutputPayment{
 
 
 
-
-
-
-
-
-
-
-
 /*Imagine you are maintaining personal data of all the players in your club.
 Three personal data namely name, age, and individual salary are the parameters which you are maintaining.
 You have kept those data as private to a particular class named PlayerRecords.

@@ -305,3 +305,77 @@ class Student extends StudentInfo {
         obj.display();
     }
 }
+
+
+
+
+
+
+
+
+
+// 15 Faculty Question 
+
+class Department {
+    private String Dept, HOD;
+    private int Students, Sections;
+    public Department(String Dept, String HOD, int students, int sections) {
+        this.Dept = Dept;
+        this.HOD = HOD;
+        this.Students = Students;
+        this.Sections = Sections;
+    }
+    public void showDepartmentDetails() {
+        System.out.println("Department Name: " + Dept + "\n");
+        System.out.println("HOD Name: " + HOD + "\n");
+        System.out.println("Total Students: " + Students + "\n");
+        System.out.println("No of sections: " + Sections + "\n");
+    }
+}
+interface Publication {
+    public void setJournalcount(int journalcount);
+    public void setProjectcount(int projectcount);
+    public void setPatterncount(int patterncount);
+}
+class StaffMember extends Department implements Publication{
+    private String name, id, qualification, designation;
+    private int experience;
+    int journalcount, projectcount, patterncount;
+    public StaffMember(String Dept, String HOD, int Students, int Sections, String name, String id, String qualification, String designation, int experience, int journalcount, int projectcount, int patterncount) {
+        super(Dept, HOD, Students, Sections);
+        this.name = name;
+        this.id = id;
+        this.qualification = qualification;
+        this.designation = designation;
+        this.experience = experience;
+        setJournalcount(journalcount);
+        setProjectcount(projectcount);
+        setPatterncount(patterncount);
+    }
+    public void showStaffDetails() {
+        showDepartmentDetails();
+        System.out.println("Staff Name: " + name + "\n");
+        System.out.println("Staff id: " + id + "\n");
+        System.out.println("Qualification: " + qualification + "\n");
+        System.out.println("Designation: " + designation + "\n");
+        System.out.println("Experience: " + experience + "\n");
+        System.out.println("Journalcount: " + journalcount + "\n");
+        System.out.println("Projectcount: " + projectcount + "\n");
+        System.out.println("Patterncount " + patterncount + "\n");
+    }
+    public void setJournalcount(int journalcount) {
+        this.journalcount = journalcount;
+    }
+    public void setProjectcount(int projectcount) {
+        this.projectcount = projectcount;
+    }
+    public void setPatterncount(int patterncount) {
+        this.patterncount = patterncount;
+    }
+}
+class Inheritance {
+    public static void main(String[] args) {
+        StaffMember s = new StaffMember("CSE", "John Doe Sr", 20, 5, "Mr. James", "21E567", "Ph.D. in Computer Science", "Assistant Professor", 10, 16, 15, 13);
+        s.showStaffDetails();
+    }
+}

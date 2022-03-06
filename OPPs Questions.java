@@ -261,3 +261,47 @@ class Club {
         System.out.println("Highest Paid Player : " + players[max].getName());
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Single Inheritance Question 
+
+import java.util.Scanner;
+class StudentInfo {
+    int RegNo;
+    String StuName;
+    void input() {
+        Scanner sc = new Scanner(System.in); 
+        System.out.print("Registration Number: ");
+        RegNo = sc.nextInt();  
+        sc.nextLine(); 
+        System.out.print("Name: ");
+        StuName = sc.nextLine();
+        
+    }
+}
+class Student extends StudentInfo {
+    void display() {
+        System.out.println("Student Registration Number is: "+RegNo+"\n");
+        System.out.println("Student Name is: "+StuName);
+    }
+    public static void main(String args[]) {
+        Student obj = new Student();
+        obj.input();
+        obj.display();
+    }
+}

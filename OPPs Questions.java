@@ -267,17 +267,6 @@ class Club {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 // Single Inheritance Question 
 
 import java.util.Scanner;

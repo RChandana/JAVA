@@ -263,13 +263,3 @@ public class MathTest {
         System.out.println("A random number between 0 and 20 = "+(int)(Math.random()* 20 + 1));
 	} 
 }
-
-
-
-
-
-
-        }
-
-}
-

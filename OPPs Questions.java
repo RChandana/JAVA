@@ -79,10 +79,6 @@ public class Billing {
 
 
 
-
-
-
-
 /*•Define a class named Payment that contains a member variable of type double that stores the amount of the payment and appropriate accessor and mutator methods.
 Also create a method named paymentDetails that outputs an English sentence to describe the amount of the payment.
   

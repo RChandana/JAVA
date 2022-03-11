@@ -282,13 +282,67 @@ Finally  apply  at  least  5 more java string methods for the inputs.*/
 
 
 
-/*Create  a  class  named Poemthat  contains  fields  for  the  name  of  the  poem  and  the  number  of lines in it. 
+/*Create  a  class  named Poem that  contains  fields  for  the  name  of  the  poem  and  the  number  of lines in it. 
 Include a constructor that requires values for both fields. Also include get methods to retrieve  field  values.  
 Create  three  subclasses: Couplet,  Limerick,  and  Haiku. 
 The  constructor for each subclass requires only a title; the lines field is set using a constant value.
 A couplet has two  lines,  a  limerick  has  five  lines,  and  a  haiku  has  three  lines.  
 Create  an  application  that demonstrates  usage  of  an  objectof  each  type. 
 Save  the  files  as  Poem.java,  Couplet.java, Limerick.java, Haiku.java, and DemoPoems.java.*/
+
+
+package demopoems;
+public class Poem {
+    private String name;
+    private int number_of_lines;
+    Poem(){
+    }
+    Poem(String s, int n){
+        name = s;
+        number_of_lines = n;
+    }
+    String getName(){
+        return name;
+    }
+    int getNumber(){
+        return number_of_lines;
+    }
+}
+public class Couplet extends Poem {
+    private String title; 
+    private int lines;
+    Couplet(String t){
+        super(t,2);
+  }
+  
+  void display(){
+      System.out.printf("Name:  %s\nNumber of lines: %d\n",getName(), getNumber());
+  }
+}
+public class Limerick extends Poem{
+    private String title; 
+    private int lines;
+    Limerick(String t){
+        super(t, 5);
+    } 
+    void display(){
+      System.out.printf("Name:  %s\nNumber of lines: %d\n",getName(), getNumber());
+  }
+}
+public class DemoPoems {
+    public static void main(String[] args) {
+        Haiku h = new Haiku("Testing Haiku");
+        Couplet c = new Couplet("Testing Couplet");
+        Limerick l = new Limerick("Testing Limeric");
+        
+        h.display();
+        c.display();
+        l.display();
+    }
+}
+
+
+
 
 
 

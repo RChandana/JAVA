@@ -459,21 +459,19 @@ class StringDemo{
 //2nd
 
 import java.util.Scanner;
-class StringDemo
-{
-public static void main(String[] args)
-{
-String str1, str2;
-Scanner sc=new Scanner(System.in);
-System.out.println("The two strings are :  ");
-str1=sc.next();
-str2=sc.next();
-System.out.println("The 1st string in lowercase: "+str1.toLowerCase());
-System.out.println("The 2nd string in uppercase: "+str2.toUpperCase());
-System.out.println("The specific character at index 3 in the first string: "+str1.charAt(3));
-System.out.println("The index of 'a' in the second string if present: "+str2.indexOf('a'));
-System.out.println("Are both strings equal: "+str1.equals(str2));
-System.out.println("Are both strings equal by ingnoring the cases: "+str1.equalsIgnoreCase(str2)+"");
+class StringDemo{
+    public static void main(String[] args){
+        String str1, str2;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("The two strings are :  ");
+        str1=sc.next();
+        str2=sc.next();
 
-}
+        System.out.println("The 1st string in lowercase: "+str1.toLowerCase()+"\n");
+        System.out.println("The 2nd string in uppercase: "+str2.toUpperCase()+"\n");
+        System.out.println("The specific character at index 1 in the first string: "+str1.charAt(1)+"\n");
+        System.out.println("The index of 'a' in the second string if present: "+str1.indexOf('a'));
+        System.out.println("\n"+"Are both strings equal: "+str1.equals(str2)+"\n");
+        System.out.println("\n"+"Are both strings equal by ingnoring the cases: "+str1.equalsIgnoreCase(str2)+"\n");
+    }
 }

@@ -274,7 +274,7 @@ public class MathTest {
 
 
 
-/*Get two string inputs Object Orientedand Programming labfrom user. 
+/*Get two string inputs Object Orientedand Programming lab from user. 
 Then find the length of  those  two  inputs. 
 Further  do  perform  concatenation  and  comparison.  
 Finally  apply  at  least  5 more java string methods for the inputs.*/

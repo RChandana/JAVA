@@ -290,3 +290,9 @@ A couplet has two  lines,  a  limerick  has  five  lines,  and  a  haiku  has  t
 Create  an  application  that demonstrates  usage  of  an  objectof  each  type. 
 Save  the  files  as  Poem.java,  Couplet.java, Limerick.java, Haiku.java, and DemoPoems.java.*/
 
+
+
+
+/*Write  an  application  named BookArrayin  which  you  create  an  array  that  holds  10  Books, some Fiction and some NonFiction. 
+Using a for loop, display details about all 10 books. Save the file as BookArray.java.*/
+

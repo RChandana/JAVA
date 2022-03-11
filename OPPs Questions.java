@@ -475,3 +475,68 @@ class StringDemo{
         System.out.println("\n"+"Are both strings equal by ingnoring the cases: "+str1.equalsIgnoreCase(str2)+"\n");
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.*;
+class Poem {
+    private String title;
+    private int lines;
+    public Poem(String title,int lines){
+        this.title= title;
+        this.lines= lines;
+    }
+    public String getTitle() {
+        return title;
+    }
+    public int getLines() {
+        return lines;
+    }
+}
+
+class Couplet extends Poem{
+    private static final int LINES=2;
+    public Couplet(String title){
+        super(title,LINES);
+    }
+}
+class Limerick extends Poem{
+    private static final int LINES=5;
+    public Limerick(String title){
+        super(title,LINES);
+    }
+}
+class Haiku extends Poem {
+    private static final int LINES=3;
+    public Haiku(String title){
+        super(title,LINES);
+    }
+}
+class DemoPoems{
+    public static void main(String[] args){
+        Poem poem1 = new Poem("The Road not Taken",20);
+        Couplet poem2 = new Couplet("The Crooning Bee");
+        Limerick poem3 = new Limerick("Footprints in the Sand");
+        Haiku poem4 = new Haiku("The Old Pond");
+        display(poem1);
+        display(poem2);
+        display(poem3);
+        display(poem4);
+    }
+    public static void display(Poem p){
+        System.out.println("\n"+"Poem: " + p.getTitle() +"\n"+
+                "No. of Lines: " + p.getLines()+"\n");
+    }
+}

@@ -296,3 +296,62 @@ Save  the  files  as  Poem.java,  Couplet.java, Limerick.java, Haiku.java, and D
 /*Write  an  application  named BookArrayin  which  you  create  an  array  that  holds  10  Books, some Fiction and some NonFiction. 
 Using a for loop, display details about all 10 books. Save the file as BookArray.java.*/
 
+public abstract class Book{ 
+    String title = new String();
+    double price;     
+    public Book(String t){   
+        title = t;
+    }      
+    public String getTitle(){
+        return title;
+    }     
+    public double getPrice(){  
+        return price;    
+    }     
+    public abstract void setPrice();  
+}
+public class UseBook {  
+    public static void main(String[] args) {  
+        Fiction aFinn = new Fiction("Huckelberry Finn");
+        NonFiction aStyle = new NonFiction("Elements of Style");   
+        System.out.println("Fiction " + aFinn.getTitle() + " costs $" + aFinn.getPrice()); 
+        System.out.println("Non-Fiction " + aStyle.getTitle() + " costs $"+ aStyle.getPrice());
+    }
+}
+public class Fiction extends Book{
+    public Fiction(String title){
+        super(title);
+        setPrice();
+    }       
+    public void setPrice(){ 
+        super.price = 24.99;
+    }
+}
+public class NonFiction extends Book{
+    public NonFiction(String title){
+        super(title); 
+        setPrice();
+    }              
+    public void setPrice(){
+        super.price = 37.99;
+    }
+}    
+public class BookArray{ 
+    public static void main(String[] args){  
+        Book Book[] = new Book[10]; 
+	    int s;  
+        Book[0] = new Fiction("Scarlet Letter");
+        Book[1] = new NonFiction("Introduction to Java");  
+        Book[2] = new Fiction("Mill on the Floss");   
+        Book[3] = new NonFiction("The Road Not Taken");    
+        Book[4] = new Fiction("A Tale of Two Cities");      
+        Book[5] = new NonFiction("Europe on $5 a Day");      
+        Book[6] = new Fiction("War and Peace");        
+        Book[7] = new Fiction("A Simple Plan");     
+        Book[8] = new Fiction("Disclosure");      
+        Book[9] = new Fiction("Nancy Drew");    
+        for(s = 0; s < Book.length; ++s) {    
+            System.out.println("Book: " + Book[s].getTitle() + " costs $" + Book[s].getPrice());
+        }
+    }
+}

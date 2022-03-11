@@ -347,65 +347,51 @@ public class DemoPoems {
 
 
 
-/*Write  an  application  named BookArrayin  which  you  create  an  array  that  holds  10  Books, some Fiction and some NonFiction. 
+/*Write  an  application  named BookArray in  which  you  create  an  array  that  holds  10  Books, some Fiction and some NonFiction. 
 Using a for loop, display details about all 10 books. Save the file as BookArray.java.*/
 
-public abstract class Book{ 
-    String title = new String();
-    double price;     
-    public Book(String t){   
-        title = t;
-    }      
-    public String getTitle(){
-        return title;
-    }     
-    public double getPrice(){  
-        return price;    
-    }     
-    public abstract void setPrice();  
-}
-public class UseBook {  
-    public static void main(String[] args) {  
-        Fiction aFinn = new Fiction("Huckelberry Finn");
-        NonFiction aStyle = new NonFiction("Elements of Style");   
-        System.out.println("Fiction " + aFinn.getTitle() + " costs $" + aFinn.getPrice()); 
-        System.out.println("Non-Fiction " + aStyle.getTitle() + " costs $"+ aStyle.getPrice());
-    }
-}
-public class Fiction extends Book{
-    public Fiction(String title){
-        super(title);
-        setPrice();
-    }       
-    public void setPrice(){ 
-        super.price = 24.99;
-    }
-}
-public class NonFiction extends Book{
-    public NonFiction(String title){
-        super(title); 
-        setPrice();
-    }              
-    public void setPrice(){
-        super.price = 37.99;
-    }
-}    
-public class BookArray{ 
-    public static void main(String[] args){  
-        Book Book[] = new Book[10]; 
-	    int s;  
-        Book[0] = new Fiction("Scarlet Letter");
-        Book[1] = new NonFiction("Introduction to Java");  
-        Book[2] = new Fiction("Mill on the Floss");   
-        Book[3] = new NonFiction("The Road Not Taken");    
-        Book[4] = new Fiction("A Tale of Two Cities");      
-        Book[5] = new NonFiction("Europe on $5 a Day");      
-        Book[6] = new Fiction("War and Peace");        
-        Book[7] = new Fiction("A Simple Plan");     
-        Book[8] = new Fiction("Disclosure");      
-        Book[9] = new Fiction("Nancy Drew");    
-        for(s = 0; s < Book.length; ++s) {    
-            System.out.println("Book: " + Book[s].getTitle() + " costs $" + Book[s].getPrice());
+public class BookArray{
+    public static void main(String[] args){
+        Book books[] = new Book[10];
+        books[0] = new Fiction("Hamlet");
+        books[1] = new Fiction("Harry Potter");
+        books[2] = new Fiction("Twilight");
+        books[3] = new Fiction("Heirs of Fire");
+        books[4] = new Fiction("Assasin's Blade");
+        books[5] = new Fiction("One night at the Call Center");
+        books[6] = new NonFiction("Thomas Calculus");
+        books[7] = new NonFiction("A Brief History of Time");
+        books[8] = new NonFiction("Into Thin Air");
+        books[9] = new NonFiction("The Dairy of a Young Girl");
+        System.out.println("Details of all the books:");
+        for(int i = 0; i < books.length; i++){
+            System.out.println();
+            System.out.println((i + 1) + ") Name : " +books[i].getBookTitle());
+            System.out.println("Price : Rs. "+ books[i].getBookPrice());
         }
     }
+}
+class Book{
+    private String bookTitle;
+    private double bookPrice;
+    public Book(String title){
+        this.bookTitle = title;
+        bookPrice = 1000;
+    }
+    public String getBookTitle() {
+        return bookTitle;
+    }
+    public double getBookPrice() {
+        return bookPrice;
+    }
+}
+class Fiction extends Book{
+    public Fiction(String title) {
+        super(title);
+   }
+}
+class NonFiction extends Book{
+    public NonFiction(String title) {
+        super(title);
+   }
 }

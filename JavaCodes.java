@@ -279,6 +279,49 @@ Then find the length of  those  two  inputs.
 Further  do  perform  concatenation  and  comparison.  
 Finally  apply  at  least  5 more java string methods for the inputs.*/
 
+// 1st
+
+import java.util.Scanner;
+class StringDemo{
+    public static void main(String[] args){
+        String str1, str2;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("The two strings are :  ");
+        str1=sc.next();
+        str2=sc.next();
+        System.out.println("Length of the 1st string :  "+str1.length());
+        System.out.println("Length of the 2nd string :  "+str2.length());
+        System.out.println("Concatenation of the two strings :  "+(str1+str2));
+        if(str1.compareTo(str2)==0){
+            System.out.println("\n"+"Both the strings are equal.");
+        }
+        else{
+            System.out.println("\n"+"Both the strings are not equal.");
+        }
+    }
+}
+
+//2nd
+
+import java.util.Scanner;
+class StringDemo
+{
+public static void main(String[] args)
+{
+String str1, str2;
+Scanner sc=new Scanner(System.in);
+System.out.println("The two strings are :  ");
+str1=sc.next();
+str2=sc.next();
+System.out.println("The 1st string in lowercase: "+str1.toLowerCase());
+System.out.println("The 2nd string in uppercase: "+str2.toUpperCase());
+System.out.println("The specific character at index 3 in the first string: "+str1.charAt(3));
+System.out.println("The index of 'a' in the second string if present: "+str2.indexOf('a'));
+System.out.println("Are both strings equal: "+str1.equals(str2));
+System.out.println("Are both strings equal by ingnoring the cases: "+str1.equalsIgnoreCase(str2)+"");
+
+}
+}
 
 
 

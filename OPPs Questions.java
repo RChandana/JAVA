@@ -364,3 +364,59 @@ class Inheritance {
         s.showStaffDetails();
     }
 }
+
+
+
+
+
+
+
+
+/*Write  an  application  named BookArray in  which  you  create  an  array  that  holds  10  Books, some Fiction and some NonFiction. 
+Using a for loop, display details about all 10 books. Save the file as BookArray.java.*/
+
+public class BookArray{
+    public static void main(String[] args){
+        Book books[] = new Book[10];
+        books[0] = new Fiction("Hamlet");
+        books[1] = new Fiction("Harry Potter");
+        books[2] = new Fiction("Twilight");
+        books[3] = new Fiction("Heirs of Fire");
+        books[4] = new Fiction("Assasin's Blade");
+        books[5] = new Fiction("One night at the Call Center");
+        books[6] = new NonFiction("Thomas Calculus");
+        books[7] = new NonFiction("A Brief History of Time");
+        books[8] = new NonFiction("Into Thin Air");
+        books[9] = new NonFiction("The Dairy of a Young Girl");
+        System.out.println("Details of all the books:");
+        for(int i = 0; i < books.length; i++){
+            System.out.println();
+            System.out.println((i + 1) + ") Name : " +books[i].getBookTitle());
+            System.out.println("Price : Rs. "+ books[i].getBookPrice());
+        }
+    }
+}
+class Book{
+    private String bookTitle;
+    private double bookPrice;
+    public Book(String title){
+        this.bookTitle = title;
+        bookPrice = 1000;
+    }
+    public String getBookTitle() {
+        return bookTitle;
+    }
+    public double getBookPrice() {
+        return bookPrice;
+    }
+}
+class Fiction extends Book{
+    public Fiction(String title) {
+        super(title);
+   }
+}
+class NonFiction extends Book{
+    public NonFiction(String title) {
+        super(title);
+   }
+}

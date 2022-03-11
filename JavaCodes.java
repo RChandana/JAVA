@@ -263,3 +263,19 @@ public class MathTest {
         System.out.println("A random number between 0 and 20 = "+(int)(Math.random()* 20 + 1));
 	} 
 }
+
+
+
+
+
+
+
+
+
+
+
+/*Get two string inputs Object Orientedand Programming labfrom user. 
+Then find the length of  those  two  inputs. 
+Further  do  perform  concatenation  and  comparison.  
+Finally  apply  at  least  5 more java string methods for the inputs.*/
+

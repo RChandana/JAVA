@@ -679,3 +679,98 @@ class StudentDemo{
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.io.*;
+import java.util.*;
+class Complex{
+    public int real, imaginary;
+    public Complex(int a, int b){
+        real = a;
+        imaginary = b;
+    }
+}
+class Main{
+    public static void addition(Complex c1, Complex c2) {
+        int result_a = c1.real + c2.real;
+        int result_b = c1.imaginary + c2.imaginary;
+        if(result_b > 0){
+            System.out.println("Addition : " + result_a + "+" + result_b + "i");
+        }
+        else{
+            System.out.println("Addition : " + result_a + "-"+(result_b * - 1) + " i ");
+        }
+}
+public static void subtraction(Complex c1, Complex c2) {
+    int result_a = c1.real - c2.real;
+    int result_b = c1.imaginary - c2.imaginary;
+    if(result_b>0){
+        System.out.println("Subtraction : " + result_a + "+" + result_b+"i" );
+    }
+    else{
+        System.out.println("Subtraction : " + result_a + "-"+(result_b * - 1) + " i ");
+    }
+}
+public static void multiplication(Complex c1, Complex c2){
+    int result_a = ((c1.real * c2.real) - (c1.imaginary * c2.imaginary));
+    int result_b = ((c1.real*c2.imaginary) + (c1.imaginary * c2.real));
+    if(result_b>0){
+        System.out.println("Multiplication : " + result_a + "+" + result_b + "i");
+    }
+    else{
+        System.out.println("Multiplication : " + result_a + "-"+(result_b * - 1) + " i ");
+    }
+}
+public static void division(Complex c1, Complex c2) {
+    int result_a = ((c1.real*c2.real + c1.imaginary*c2.imaginary)/((c2.real)^2 + (c2.imaginary)^2));
+    int result_b = (((c1.imaginary*c2.real) - (c1.real*c2.imaginary)/((c2.real)^2 + (c2.imaginary)^2)));
+    if(result_b>0){
+        System.out.println("Division : " + result_a + "+" + result_b + "i");
+    }
+    else{
+        System.out.println("Division : " + result_a + "-"+(result_b * - 1) + " i ");
+    }
+}
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    int a1, b1, a2, b2;
+    
+    System.out.print("Enter Real Part of Complex Number 1 : ");
+   a1 = sc.nextInt();
+   System.out.print("Enter Imaginary Part of Complex Number 1 : ");
+   b1 = sc.nextInt();
+   System.out.print("Enter Real Part of Complex Number 2 : ");
+   a2 = sc.nextInt();
+   System.out.print("Enter Imaginary Part of Complex Number 2 : ");
+   b2 = sc.nextInt();
+   
+   Complex c1 = new Complex(a1, b1);
+   Complex c2 = new Complex(a2, b2);
+   
+   addition(c1,c2);
+   subtraction(c1,c2);
+   multiplication(c1,c2);
+   division(c1,c2);
+}
+}

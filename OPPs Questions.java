@@ -748,10 +748,10 @@ class Test extends Student{
         marks_English = m4;
     }
     public void showMarks(){
-        System.out.println("Marks of Subjectl : " + marks_CSE);
-        System.out.println("Marks of Subject2 : " + marks_ECE);
-        System.out.println("Marks of Subject3 : " + marks_Maths);
-        System.out.println("Marks of Subject4 : " + marks_English);
+        System.out.println("Marks in CSE : " + marks_CSE);
+        System.out.println("Marks in ECE : " + marks_ECE);
+        System.out.println("Marks in Maths : " + marks_Maths);
+        System.out.println("Marks in English : " + marks_English);
     }
 }
 class Result extends Test{
@@ -761,19 +761,19 @@ class Result extends Test{
     public void evaluateResult(){
         totalMarks = marks_CSE + marks_ECE + marks_Maths + marks_English;
         percentage = (totalMarks*100.00F/600.00F);
-        if (percentage >=50.00F)
+        if (percentage >= 50.00F)
         grade = 'D';
         else
-        if(percentage >=55.00F && percentage<=60.00F)
+        if(percentage >= 55.00F && percentage <= 60.00F)
         grade = 'C';
         else
-        if (percentage >=61.00F && percentage<=70.00F)
+        if (percentage >= 61.00F && percentage <= 70.00F)
         grade = 'B';
         else
-        if (percentage >=71.00F && percentage<=75.00F)
+        if (percentage >= 71.00F && percentage <= 75.00F)
         grade = 'A';
         else
-        if (percentage >=76.00F && percentage<=85.00F)
+        if (percentage >= 76.00F && percentage <= 85.00F)
         grade = 'H';
         else
         grade = 'S';

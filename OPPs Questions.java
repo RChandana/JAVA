@@ -620,3 +620,76 @@ create a LabCourse: CSE, ECE, CIVIL, or IT. If the user enters any other  depart
 Then display the    course    data.    Save    the    files    as    CollegeCourse.java, LabCourse.java,    and UseCourse.java. */
 
 
+
+
+
+import java.util.*;
+class CollegeCourse {
+    private String dept;
+    private int id;
+    private double credits;
+    private double price;
+    public CollegeCourse(String dept, int id, double credits) {
+        super();
+        this.dept = dept;
+        this.id = id;
+        this.credits = credits;
+        price = 120;
+    }
+    void display() {
+        System.out.println(dept + " - " + id + "\n" + "Non-lab Course " + credits +" credits"+ "\n" + " Total fee is Rs." + (price * credits));
+    }
+
+}
+class LabCourse extends CollegeCourse {
+    private String dept;
+    private int id;
+    private double credits;
+    private double price;
+    public LabCourse(String dept, int id, double credits) {
+        super(dept, id, credits);
+        this.dept = dept;
+        this.id = id;
+        this.credits = credits;
+        price = 120;
+    }
+    void display() {
+        System.out.println(dept + " - " + id + "\n" + "Lab Course " + credits + " credits" + "\n"  + "Lab fee = $50" + "\n" + "Total fee is Rs." + ((price * credits) + 50));
+    }
+}
+class UseCourse {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String dept, inStr;
+        String[] labCourses = { "CSE", "ECE", "CIVIL", "IT" };
+        int id, credits;
+        int found = 0;
+        int x;
+        System.out.println("Enter the Department : ");
+        dept = input.nextLine();
+        dept = dept.toUpperCase();
+        System.out.println("Enter the id : ");
+        id = input.nextInt();
+        System.out.println("Enter the credits : ");
+        credits = input.nextInt();
+        for (x = 0; x < labCourses.length; x++) {
+            if (dept.equals(labCourses[x])) {
+                found = 1;
+                inStr = labCourses[x];
+                break;
+            } 
+            else{
+                found = 0;
+            }
+        }
+        if (found == 1) {
+            LabCourse lab = new LabCourse(dept, id, credits);
+            lab.display();
+        } 
+        else {
+            CollegeCourse course = new CollegeCourse(dept, id, credits);
+            course.display();
+        }
+    }
+}
+

@@ -710,6 +710,7 @@ class UseCourse {
 
 
 
+// Create  a  class student  which  includes  parameters  roll_no,  name  and  address  and consider it as a super class. Then create a subclass test with parameters marl1, mark2, mark3 and mark4. Then  create  another  sub  class  result  with  parameters total_marks,  percentage  and  grade. Apply  multilevel  inheritance.  Here  Student class  is the super  class  for  test class and  test class is super class of result class. Implement a java application in which you obtain the details roll_no,  name,  address,  mark1,  mark2,  mark3  and  mark4  from the user  side  and then print total_marks, percentage and grade. Student test result
 
 
 

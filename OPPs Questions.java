@@ -716,36 +716,36 @@ class UseCourse {
 
 import java.util.*;
 class Student{
-    private int rollno;
+    private String rollno;
     private String name;
     private String address;
-    public void storeDetails(int rno, String sname, String sadd){
-        rollno = rno;
-        name = sname;
-        address = sadd;
+    public void storeDetails(String no, String Name, String add){
+        rollno = no;
+        name = Name;
+        address = add;
     }
     public void showDetails(){
         System.out.println("Roll No : " + rollno);
-        System.out.println("Name : " + name);
-        System.out.println("Address : " + address);
+        System.out.println("\n" + "Name : " + name);
+        System.out.println("\n" +"Address : " + address);
     }
 }
 class Test extends Student{
-    protected int marksSubjectl;
-    protected int marksSubject2;
-    protected int marksSubject3;
-    protected int marksSubject4;
+    protected int marks_CSE;
+    protected int marks_ECE;
+    protected int marks_Maths;
+    protected int marks_English;
     public void storeMarks(int ml, int m2, int m3, int m4){
-        marksSubjectl = ml;
-        marksSubject2 = m2;
-        marksSubject3 = m3;
-        marksSubject4 = m4;
+        marks_CSE = ml;
+        marks_ECE = m2;
+        marks_Maths = m3;
+        marks_English = m4;
     }
     public void showMarks(){
-        System.out.println("Marks of Subjectl : " + marksSubjectl);
-        System.out.println("Marks of Subject2 : " + marksSubject2);
-        System.out.println("Marks of Subject3 : " + marksSubject3);
-        System.out.println("Marks of Subject4 : " + marksSubject4);
+        System.out.println("Marks of Subjectl : " + marks_CSE);
+        System.out.println("Marks of Subject2 : " + marks_ECE);
+        System.out.println("Marks of Subject3 : " + marks_Maths);
+        System.out.println("Marks of Subject4 : " + marks_English);
     }
 }
 class Result extends Test{
@@ -753,7 +753,7 @@ class Result extends Test{
     private float percentage;
     private char grade;
     public void evaluateResult(){
-        totalMarks = marksSubjectl + marksSubject2 + marksSubject3 + marksSubject4;
+        totalMarks = marks_CSE + marks_ECE + marks_Maths + marks_English;
         percentage = (totalMarks*100.00F/600.00F);
         if (percentage >=50.00F)
         grade = 'D';
@@ -780,11 +780,11 @@ class Result extends Test{
         System.out.println("Grade : " + grade);
     }
 }
-public class Multilevellnheritance{
+class Multilevellnheritance{
     public static void main(String ar[]){
         Result ob = new Result();
-        ob.storeDetails(1001, "Alice", "New York");
-        ob.storeMarks(135,130,132,138);
+        ob.storeDetails("21BCE8718", "Hari Chandana", "Amaravati");
+        ob.storeMarks(99,78,88,92);
         ob.evaluateResult();
         ob.showResult();
     }

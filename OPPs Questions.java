@@ -556,200 +556,30 @@ class Main{
         int result_a = c1.real + c2.real;
         int result_b = c1.imaginary + c2.imaginary;
         if(result_b > 0){
-            System.out.println("Addition : "+result_a+" + i "+result_b);
+            System.out.println("Addition : " + result_a + " + " + result_b + "i");
         }
         else{
-            System.out.println("Addition : "+result_a+" - i "+(result_b* - 1));
+            System.out.println("Addition : " + result_a + " - "+(result_b * - 1) + "i ");
         }
 }
 public static void subtraction(Complex c1, Complex c2) {
     int result_a = c1.real - c2.real;
     int result_b = c1.imaginary - c2.imaginary;
     if(result_b>0){
-        System.out.println("Subtraction : " + result_a + " + i " + result_b);
+        System.out.println("Subtraction : " + result_a + " + " + result_b+"i" );
     }
     else{
-        System.out.println("Subtraction : " + result_a + " - i " + (result_b*-1));
-    }
-}
-public static void multiplication(Complex c1, Complex c2){
-    int result_a = ((c1.real * c2.real) - (c1.imaginary * c2.imaginary));
-    int result_b = ((c1.real*c2.imaginary)+(c1.imaginary * c2.real));
-    if(result_b>0){
-        System.out.println("Multiplication : " + result_a + " + i " + result_b);
-    }
-    else{
-        System.out.println("Multiplication : " + result_a + " - i " + (result_b*-1));
-    }
-}
-public static void main(String[] args){
-    Scanner sc = new Scanner(System.in);
-    int a1, b1, a2, b2;
-    
-    System.out.print("Enter Real Part of Complex Number 1 : ");
-   a1 = sc.nextInt();
-   System.out.print("Enter Imaginary Part of Complex Number 1 : ");
-   b1 = sc.nextInt();
-   System.out.print("Enter Real Part of Complex Number 2 : ");
-   a2 = sc.nextInt();
-   System.out.print("Enter Imaginary Part of Complex Number 2 : ");
-   b2 = sc.nextInt();
-   
-   Complex c1 = new Complex(a1, b1);
-   Complex c2 = new Complex(a2, b2);
-   
-   addition(c1,c2);
-   subtraction(c1,c2);
-   multiplication(c1,c2);
-}
-}
-
-
-
-
-
-
-
-
-
-import java.io.*;
-class Student{
-    int rollno;
-    String name;
-    int number_of_subjects;
-    int mark[];
-    Student(int roll,String stud_name,int noofsub)throws IOException{
-        rollno=roll;
-        name=stud_name;
-        number_of_subjects= noofsub;
-        getMarks(noofsub);
-    }
-    public void getMarks(int nosub ) throws IOException{
-        mark=new int[nosub];
-        BufferedReader br= new BufferedReader (new InputStreamReader(System.in));
-        for (int i=0; i<nosub;i++){
-            System.out.println("Enter " + i + " Subject Marks :  ");
-            mark[i]=Integer.parseInt(br.readLine());
-            System.out.println("");
-        }
-    }
-    public void calculateMarks(){
-        double percentage=0;
-        String grade;
-        int tmarks=0;
-        for (int i=0;i<mark.length;i++){
-            tmarks+=mark[i];
-        }
-        percentage=tmarks/number_of_subjects;
-        System.out.println("Roll Number : "+rollno);
-        System.out.println("Name Of Student is : "+name);
-        System.out.println("Number Of Subject : "+number_of_subjects);
-        System.out.println("Percentage Is : "+percentage);
-        if (percentage>=70)
-        System.out.println("Grade Is First Class With Distinction");
-        else if(percentage>=60 && percentage<70)
-        System.out.println("Grade Is First Class");
-        else if(percentage>=50 && percentage<60)
-        System.out.println("Grade Is Second Class");
-        else if(percentage>=40 && percentage<50)
-        System.out.println("Grade Is Pass Class");
-        else
-        System.out.println("You Have Failed");
-    }
-}
-class StudentDemo{
-    public static void main(String args[])throws IOException{
-        int rno,no,nostud;
-        String name;
-        BufferedReader br= new BufferedReader (new InputStreamReader(System.in));
-        System.out.println("Enter How many Students: ");
-        nostud=Integer.parseInt(br.readLine());
-        Student s[]=new Student[nostud];
-        for(int i=0;i<nostud;i++){
-            System.out.println("Enter Roll Number: ");
-            rno=Integer.parseInt(br.readLine());
-            System.out.println("Enter Name: ");
-            name=br.readLine();
-            System.out.println("Enter No of Subject: ");
-            no=Integer.parseInt(br.readLine());
-            s[i]=new Student(rno,name,no);
-        }
-        for(int i=0;i<nostud;i++){
-            s[i].calculateMarks();
-        }
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import java.io.*;
-import java.util.*;
-class Complex{
-    public int real, imaginary;
-    public Complex(int a, int b){
-        real = a;
-        imaginary = b;
-    }
-}
-class Main{
-    public static void addition(Complex c1, Complex c2) {
-        int result_a = c1.real + c2.real;
-        int result_b = c1.imaginary + c2.imaginary;
-        if(result_b > 0){
-            System.out.println("Addition : " + result_a + "+" + result_b + "i");
-        }
-        else{
-            System.out.println("Addition : " + result_a + "-"+(result_b * - 1) + " i ");
-        }
-}
-public static void subtraction(Complex c1, Complex c2) {
-    int result_a = c1.real - c2.real;
-    int result_b = c1.imaginary - c2.imaginary;
-    if(result_b>0){
-        System.out.println("Subtraction : " + result_a + "+" + result_b+"i" );
-    }
-    else{
-        System.out.println("Subtraction : " + result_a + "-"+(result_b * - 1) + " i ");
+        System.out.println("Subtraction : " + result_a + " - "+(result_b * - 1) + "i ");
     }
 }
 public static void multiplication(Complex c1, Complex c2){
     int result_a = ((c1.real * c2.real) - (c1.imaginary * c2.imaginary));
     int result_b = ((c1.real*c2.imaginary) + (c1.imaginary * c2.real));
     if(result_b>0){
-        System.out.println("Multiplication : " + result_a + "+" + result_b + "i");
+        System.out.println("Multiplication : " + result_a + " + " + result_b + "i");
     }
     else{
-        System.out.println("Multiplication : " + result_a + "-"+(result_b * - 1) + " i ");
-    }
-}
-public static void division(Complex c1, Complex c2) {
-    int result_a = ((c1.real*c2.real + c1.imaginary*c2.imaginary)/((c2.real)^2 + (c2.imaginary)^2));
-    int result_b = (((c1.imaginary*c2.real) - (c1.real*c2.imaginary)/((c2.real)^2 + (c2.imaginary)^2)));
-    if(result_b>0){
-        System.out.println("Division : " + result_a + "+" + result_b + "i");
-    }
-    else{
-        System.out.println("Division : " + result_a + "-"+(result_b * - 1) + " i ");
+        System.out.println("Multiplication : " + result_a + " - "+(result_b * - 1) + "i ");
     }
 }
 public static void main(String[] args){
@@ -771,6 +601,5 @@ public static void main(String[] args){
    addition(c1,c2);
    subtraction(c1,c2);
    multiplication(c1,c2);
-   division(c1,c2);
 }
 }

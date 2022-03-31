@@ -45,9 +45,7 @@ With overriding, the method call is determined at the runtime based on the objec
 # Polymorphism
 
 Polymorphism refers to the fact that you can have multiple methods with the same name in the same class
+ There are two kinds of polymorphism:
+* Overloading/compile time polymorphism - Two or more methods with different signatures 
 
-
-• There are two kinds of polymorphism:
-• Overloading/compile time polymorphism
-• Two or more methods with different signatures • Overriding/runtime time polymorphism
-• Replacing an inherited method with another having the same signature
+* Overriding/runtime time polymorphism - Replacing an inherited method with another having the same signature

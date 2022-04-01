@@ -825,3 +825,15 @@ class ComputeInterest {
         input.close();
   }
 }
+
+
+
+
+/*Consider that, a lab in charge maintains lab instruments. PhD scholars help students. 
+Professor conducts labs. Consider LabInCharge as an interface and PHDscholar as an abstract class.
+LabInCharge has a method named install() and PHDscholar has a help() method respectively which are abstract in nature. 
+However, PHDscholar has a concrete method named labsAssigned(). 
+LabInCharge has attributes such as labName, roomNo, and PHDscholar has attributes like scholarName, labConducted. 
+Professor class  has  a  concrete  method  named teaches(), and  fields  like subject  and  emp_id and define the above said abstract methods also.
+HOD class is the main() containing class.
+Write a java code  to display  the attributes  from  each  of the  classes and interface  creating  proper  instances and invoking the methods from the HOD class with proper implementation. */

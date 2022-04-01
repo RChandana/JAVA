@@ -789,6 +789,8 @@ class Multilevellnheritance{
 
 
 
+/* Create a  class in the  name of  ComputeInterest.  Use  scanner  class to  get  principal, rate and time as inputs  from the user  side. 
+Compute  simple  interest  and compound  interest  by  using  respective formulas. Save the implemented java program as interest.java. */
 
 
 import java.util.*;

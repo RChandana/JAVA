@@ -839,5 +839,49 @@ HOD class is the main() containing class.
 Write a java code  to display  the attributes  from  each  of the  classes and interface  creating  proper  instances and invoking the methods from the HOD class with proper implementation. */
 
 
+public class HOD {
+    public static void main(String[] args) {
+        Prof p1 = new Prof("CSE",11);
+        p1.teaches();
+        p1.install();
+        PHD_Scholar s1 = new Prof("Mr.Mahesh","LAB-234");
+        s1.LabsAssigned();
+        s1.help();
+    }
+}
 
+interface LabInCharge{
+    String LabName = "LAB-102";
+    int Room_No = 201;
+    public void install();
+}
+abstract class PHD_Scholar{  
+    String ScholarName;
+    String LabConducted;
+    abstract void help(); 
+    void LabsAssigned(){
+        System.out.println(ScholarName + " is assigned to " + LabConducted + "." + "\n");
+    }
+}  
+class Prof extends PHD_Scholar implements LabInCharge{
+    String Subject;
+    int Emp_ID;
+    Prof(String Subject, int Emp_ID){
+        this.Subject = Subject;
+        this.Emp_ID = Emp_ID;
+    }
+    Prof(String ScholarName, String LabConducted){
+        this.ScholarName = ScholarName;
+        this.LabConducted = LabConducted;
+    }
+    public void install(){
+        System.out.println("Instrument installed in " + LabName + " and the Room Number is " + Room_No + "\n");
+    }
+    void help(){
+        System.out.println(ScholarName + " helps students during the Lab." + "\n");
+    }
+    void teaches(){
+        System.out.println("Professor's Employee ID is " + Emp_ID + " and he/she teaches " + Subject + "." + "\n");
+    }
+}
 

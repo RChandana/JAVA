@@ -837,3 +837,24 @@ LabInCharge has attributes such as labName, roomNo, and PHDscholar has attribute
 Professor class  has  a  concrete  method  named teaches(), and  fields  like subject  and  emp_id and define the above said abstract methods also.
 HOD class is the main() containing class.
 Write a java code  to display  the attributes  from  each  of the  classes and interface  creating  proper  instances and invoking the methods from the HOD class with proper implementation. */
+
+
+
+import java.util.*;
+interface LabIncharge{
+    String LabName = null;
+}
+abstract class PHD_Scholar{
+    String ScholarName;
+    String LabConducted;
+    PHD_Scholar(ScholarName, LabConducted){
+        this.ScholarName = ScholarName;
+        this.LabConducted = LabConducted;
+    }
+    public abstract help();
+}
+public class HOD{
+    public static void main(String[] args){
+        
+    }
+}

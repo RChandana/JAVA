@@ -885,3 +885,105 @@ class Prof extends PHD_Scholar implements LabInCharge{
     }
 }
 
+
+
+
+
+
+
+
+
+//
+
+import java.util.*;
+import java.lang.*;
+class demoTurner1 {
+    public static void main (String [] args) {
+        leaf leaf = new leaf();
+        pancake pancake = new pancake();
+        page page = new page();
+        System.out.println("Demoturner1 Running >>>");
+        leaf.turn();
+        page.turn();
+        pancake.turn();
+    }
+}
+class demoTurner2 {
+    public static void main (String [] args) {
+        leaf leaf = new leaf();
+        pancake pancake = new pancake();
+        page page = new page();
+        life life = new life();
+        person person = new person();
+        System.out.println("Demoturner2 Running >>>");
+        leaf.turn();
+        page.turn();
+        pancake.turn();
+        life.turn();
+        person.turn();
+    }
+}
+class demoTurner3 {
+    public static void main (String [] args) {
+        leaf leaf = new leaf();
+        pancake pancake = new pancake();
+        page page = new page();
+        life life = new life();
+        person person = new person();
+        System.out.println("Demoturner3 Running >>>");
+        turner ref;
+
+        ref = leaf;
+        ref.turn();
+
+        ref = page;
+        ref.turn();
+
+        ref = pancake;
+        ref.turn();
+
+        ref = life;
+        ref.turn();
+
+        ref = person;
+        ref.turn();
+    }
+}
+class leaf implements turner {
+    public void turn() {
+        System.out.println("Message from leaf class - The leaf has turned yellow.");
+    }
+}
+class life implements turner {
+    public void turn() {
+        System.out.println("Message from life class - My life has turned up side down.");
+    }
+}
+class page implements turner {
+    public void turn() {
+        System.out.println("Message from page class - The page has been flipped to the next page.");
+    }
+}
+class page implements turner {
+    public void turn() {
+        System.out.println("Message from page class - The page has been flipped to the next page.");
+    }
+}
+class page implements turner {
+    public void turn() {
+        System.out.println("Message from page class - The page has been flipped to the next page.");
+    }
+}
+class pancake implements turner {
+    public void turn() {
+        System.out.println("Message from pancake class - The pancke has been flipped.");
+    }
+}
+class person implements turner {
+    public void turn() {
+        System.out.println("Message from person class - The wanted person has turned them in.");
+    }
+}
+interface turner {
+    public void turn();
+}

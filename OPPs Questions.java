@@ -1000,3 +1000,15 @@ class person implements turner {
 interface turner {
     public void turn();
 }
+
+
+
+
+/*Implement a java program to check whether the given number is odious or not. Follow the steps for implementing program.
+Step1: Perform binary conversion for a given number.
+Step 2: Count the number of one’s available.
+Step 3: Check frequency either as odd or even
+Step 4: Print result 
+
+Note:  An  odious number  is  a  non-negative  number  that  has  an  odd  number  of  1’s  in  its binary representation. 
+Example - 111 is the binary representation for number 7 which is an odious number too.*/

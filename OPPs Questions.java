@@ -1012,3 +1012,44 @@ Step 4: Print result
 
 Note:  An  odious number  is  a  non-negative  number  that  has  an  odd  number  of  1’s  in  its binary representation. 
 Example - 111 is the binary representation for number 7 which is an odious number too.*/
+
+
+
+import java.util.*;
+import java.lang.*;
+class Odious {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("The Decimal number is : ");
+        int DecimalNumber = sc.nextInt();
+        BinaryCheck checker = new BinaryCheck(DecimalNumber);
+        checker.BinaryOdiusChecker();
+    }
+}
+class BinaryCheck {
+    int DecimalNumber;
+    BinaryCheck (int DecimalNumber) {
+        this.DecimalNumber = DecimalNumber;
+    }
+    void BinaryOdiusChecker() {
+        int count = 0;
+        ArrayList<String> Binary = new ArrayList<String>();
+        String BinaryString = Integer.toBinaryString(DecimalNumber);
+
+        for (int i = 0; i < BinaryString.length(); i++) {
+            Binary.add(String.valueOf(BinaryString.charAt(i)));
+        }
+        for (String c : Binary) {
+            if (c.equals("1")) {
+                count++;
+            }
+        }
+        count = count % 2;
+        if (count == 0) {
+            System.out.println("It's not a odious number");
+        }
+        else {
+            System.out.println("It's a odious number");
+        }
+    }
+}

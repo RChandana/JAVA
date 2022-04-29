@@ -1059,7 +1059,6 @@ class BinaryCheck {
 
 // Develop Number Utilities package and provide following classes with supported functionalities: 
 // Develop a NumberUtilTest class to test the Number Utilities package.
-
 package com.arssoft.numbers.util;
 import java.util.Scanner;  
 import java.lang.Math;  
@@ -1095,18 +1094,21 @@ class Armstrong {
 class Palindrome{ 
     public static boolean palindrome(int n){
         public static void main(String[] args) {
-            String str = "Computer", reverseStr = "";
-            int strLength = str.length();
-            for (int i = (strLength - 1); i >=0; --i) {
-                reverseStr = reverseStr + str.charAt(i);
+            int n = 3553, reversedNum = 0, remainder;
+            int originalNum = n;
+            while (n != 0) {
+                remainder = n % 10;
+                reversedNum = reversedNum * 10 + remainder;
+                n /= 10;
     }
-    if (str.toLowerCase().equals(reverseStr.toLowerCase())) {
-      System.out.println(str + " is a Palindrome String.");
+    if (originalNum == reversedNum) {
+      System.out.println(originalNum + " is Palindrome.");
     }
     else {
-        System.out.println(str + " is not a Palindrome String.");
+      System.out.println(originalNum + " is not Palindrome.");
     }
-        }
+  }
+}
     }
 }
 class Factorial{ 

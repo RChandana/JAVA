@@ -903,7 +903,8 @@ class Prof extends PHD_Scholar implements LabInCharge{
     Save  the  files  as  Turner.java,  Leaf.java,  Page.java, Pancake.java, and DemoTurners.java.
 
 
-b) Think of two more objects that use turn(), create classes for them, and then add objects to the DemoTurners application, renaming it DemoTurners2. java. Save the files, using the names of new objects that use turn().
+b) Think of two more objects that use turn(), create classes for them, and then add objects to the DemoTurners application, renaming it DemoTurners2. java. 
+Save the files, using the names of new objects that use turn().
 
 
 c) Apply  Dynamic  method  dispatch  to  show  the  power  of  it  and  name  the  class  as DemoTurners3.java.*/

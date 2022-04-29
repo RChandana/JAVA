@@ -1092,8 +1092,7 @@ class Armstrong {
     }   
 }
 class Palindrome{ 
-    public static boolean palindrome(int n){
-        public static void main(String[] args) {
+    public static void main(String args[]){  
             int n = 3553, reversedNum = 0, remainder;
             int originalNum = n;
             while (n != 0) {
@@ -1107,12 +1106,16 @@ class Palindrome{
     else {
       System.out.println(originalNum + " is not Palindrome.");
     }
-  }
+        }
 }
+class Factorial{  
+    public static void main(String args[]){  
+        int i,fact=1;  
+        int number=5;   
+        for(i=1;i<=number;i++){    
+            fact=fact*i;
+        }
+        System.out.println("Factorial of "+number+" is: "+fact);
     }
 }
-class Factorial{ 
-    public static int factorial(int n){
-        
-    }
-}
+

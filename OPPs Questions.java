@@ -1054,3 +1054,24 @@ class BinaryCheck {
         }
     }
 }
+
+
+
+
+
+
+package com.arssoft.numbers.util; public class Armstrong { public static boolean armstrong(int n){ int temp, digits=0, last=0, sum=0; temp=n; while(temp>0){ temp = temp/10; digits++; } temp = n; while(temp>0){ last = temp % 10; sum +=
+	
+	
+	
+	
+	}
+    class Amstrong {
+        
+    }
+    class Palindrome{
+        
+    }
+    class Factorial{
+        
+    }

@@ -1119,3 +1119,113 @@ class Factorial{
     }
 }
 
+
+
+
+
+//             OR
+
+
+
+
+package com.arssoft.numbers.util;
+
+public class Armstrong {
+public static boolean armstrong(int n){
+int temp, digits=0, last=0, sum=0;
+temp=n;
+while(temp>0){
+temp = temp/10;
+digits++;
+}
+temp = n;
+while(temp>0){
+last = temp % 10;
+sum += (Math.pow(last, digits));
+temp = temp/10;
+}
+if(n==sum)
+return true;
+else
+return false;
+}
+
+}
+---------------------------------------
+package com.arssoft.numbers.util;
+
+public class Factorial {
+  
+public static int factorial(int n){
+if (n == 0)
+return 1;
+else
+return n*factorial(n-1);
+}
+  
+}
+
+-------------------------------------------
+
+package com.arssoft.numbers.util;
+
+public class Palindrome {
+public static boolean palindrome(int n )
+{
+  
+int sum=0,r,temp;
+temp=n;
+while(n!=0)
+{
+r=n%10;
+sum=(sum*10)+r;
+n/=10;  
+}
+  
+if(temp==sum)
+return true;
+else
+return false;
+}
+}
+------------------------------------------
+import com.arssoft.numbers.util.*;
+import java.util.Scanner;
+
+public class NumberUtilTest {
+  
+static int n, t, s;
+static boolean flag;
+  
+  
+public static void main(String arg[]){
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter the value of n: ");
+n=sc.nextInt();
+  
+  
+System.out.println("The factorial of n is: " + Factorial.factorial(n));
+  
+System.out.print("Enter the value of n: ");
+n=sc.nextInt();
+  
+flag = Armstrong.armstrong(n);
+if(flag)
+System.out.println("Armstrong Number");
+else
+System.out.println("Not Armstrong Number");
+  
+  
+System.out.print("Enter the value of n: ");
+n=sc.nextInt();
+  
+  
+flag = Palindrome.palindrome(n);
+if(flag)
+System.out.println("The Number is Palindrome");
+else
+System.out.println("The Number is not Palindrome");
+  
+  
+}
+}

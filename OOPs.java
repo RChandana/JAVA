@@ -110,3 +110,38 @@ public class TestGarbage1{
         System.gc(); 
     }
 }
+
+
+
+
+
+// Generics
+
+class Gen<T>{
+    T ob;
+    Gen(T o){
+        ob = o;
+    }
+    T getob(){
+        return ob;
+    }
+    vois showType(){
+        System.out.println("The type of T is " + ob.getClass().getName());
+    }
+}
+Class GenDemo{
+    public static viod main(Sting args[]){
+        Gen<Integer> iob;
+        iob = new Gen<Integer>(54);
+        iob.showType();
+        int a = iob.getob();
+        System.out.println("Value : " + a);
+        System.out.println();
+        Gen<String> strob;
+        strob = new Gen<String>("Chandana");
+        strob.showType();
+        String name = strob.getob();
+        System.out.println("Name : " + name);
+        System.out.println();
+    }
+}

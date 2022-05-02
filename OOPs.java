@@ -129,7 +129,7 @@ class Gen<T>{
         System.out.println("The type of T is " + ob.getClass().getName());
     }
 }
-Class GenDemo{
+class GenDemo{
     public static viod main(Sting args[]){
         Gen<Integer> iob;
         iob = new Gen<Integer>(54);

@@ -151,6 +151,26 @@ class MultipleCatches{
 }
 
 // When a is any other number other than 0.
+class MultipleCatches{
+    public static void main(String args[]){
+        try{
+            int x = Integer.parseInt(args[0]);
+            int y = Integer.parseInt(args[1]);
+            int a = x + y;
+            System.out.println("a = " + a);
+            int b = 20 / a;
+            int c[] = {2};
+            c[10] = 50;
+        }
+        catch(ArithmeticException e){
+            System.out.println("Exception : " + e);
+        }
+        catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("Exception : " + e);
+        }
+        System.out.println("After try-catch blocks.");
+    }
+}
 
 
 // Generics

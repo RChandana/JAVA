@@ -263,6 +263,26 @@ class NestedTry{
     }
 }
 
+// Throw Exception Example
+class Throw{
+    static void demo(){
+        try{
+            throw new NullPointerException("Null");
+        }
+        catch(NullPointerException e){
+            System.out.println("Exception Caught");
+            throw e;
+        }
+    }
+    public static void main(String args[]){
+        try{
+            demo();
+        }
+        catch(NullPointerException e){
+            System.out.println("Recaught : " + e);
+        }
+    }
+}
 
 // Generics
 

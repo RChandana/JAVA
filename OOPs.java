@@ -154,9 +154,7 @@ class MultipleCatches{
 class MultipleCatches{
     public static void main(String args[]){
         try{
-            int x = Integer.parseInt(args[0]);
-            int y = Integer.parseInt(args[1]);
-            int a = x + y;
+            int a = 1;
             System.out.println("a = " + a);
             int b = 20 / a;
             int c[] = {2};
@@ -172,6 +170,27 @@ class MultipleCatches{
     }
 }
 
+// Executing both the exceptions using two try-catch exceptions.
+class MultipleCatches{
+    public static void main(String args[]){
+        try{
+            int a = args.length;
+            System.out.println("a = " + a);
+            int b = 20 / a;
+        }
+        catch(ArithmeticException e){
+            System.out.println("Exception : " + e);
+        }
+        try{
+           int c[] = { 1, 6, 3 };
+           c[20] = 50; 
+        }
+        catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("Exception : " + e);
+        }
+        System.out.println("After try-catch blocks.");
+    }
+}
 
 // Generics
 

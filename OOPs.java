@@ -192,7 +192,7 @@ class MultipleCatches{
     }
 }
 
-// Another try-catch exception in a catch.
+// Another try-catch exception within a catch.
 class MultipleCatches{
     public static void main(String args[]){
         try{
@@ -209,6 +209,28 @@ class MultipleCatches{
             catch(ArrayIndexOutOfBoundsException x){
                 System.out.println("Exception : " + x);
             }
+        }
+        System.out.println("After try-catch blocks.");
+    }
+}
+
+// Another try-catch exception in a Nested Try Statement
+class MultipleCatches{
+    public static void main(String args[]){
+        try{
+            try{
+                int a = args.length;
+            System.out.println("a = " + a);
+            int b = 20 / a;
+        }
+        catch(ArithmeticException e){
+            System.out.println("Exception : " + e);
+        }
+        int c[] = { 1, 6, 3 };
+        c[20] = 50; 
+        }
+        catch(ArrayIndexOutOfBoundsException x){
+            System.out.println("Exception : " + x);
         }
         System.out.println("After try-catch blocks.");
     }

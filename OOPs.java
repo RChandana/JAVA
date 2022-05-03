@@ -214,7 +214,7 @@ class MultipleCatches{
     }
 }
 
-// Another try-catch exception in a Nested Try Statement
+// Another try-catch exception within a Nested Try Statement
 class MultipleCatches{
     public static void main(String args[]){
         try{
@@ -235,6 +235,34 @@ class MultipleCatches{
         System.out.println("After try-catch blocks.");
     }
 }
+
+
+// Nested Try Statements
+class NestedTry{
+    public static void main(String args[]){
+        try{
+            int a = 0;
+            int b = 20 / a;
+            System.out.println("a = " + a);
+            try{
+                if(a == 1){
+                    a = a / (a - a);
+                }
+                if(a == 2){
+                    int c[] = {1,3};
+                    c[10] = 50;
+                }
+            }
+            catch(ArrayIndexOutOfBoundsException e){
+                System.out.println("Exception : " + e);
+            }
+        }
+        catch(ArithmeticException m){
+            System.out.println("Exception : " + m);
+        }
+    }
+}
+
 
 // Generics
 

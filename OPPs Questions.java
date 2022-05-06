@@ -1229,3 +1229,22 @@ System.out.println("The Number is not Palindrome");
   
 }
 }
+
+
+
+/*Develop  a  ScoreGradeTest  class  to  display  a  series  of  five  Student  ID  numbers and  asks  the  user  to  enter  a  numeric  test  scores  of  three  subjects and  a  grade. 
+Develop  a  checked  ScoreExceptionclass  and  throw  it  when  the  user  enters  an invalid   score   (greater   than   100   and   less   than   0).  
+Develop   a   checked GradeException  class  and  throw  it  when  the  user  enters  an  invalid  grade.  
+(Other than A, B, C, D, F). Also throw GradeException if the user enters wrong grade for their   average   test   score.   
+Differentiate   these   two   GradeException   types   with appropriate messages.
+
+A -> >90
+B -> >80 and <89
+C -> >70 and <79
+D -> >60 and <69
+F -> >60
+
+
+
+
+*/

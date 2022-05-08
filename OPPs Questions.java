@@ -1354,3 +1354,111 @@ public static void main(String[] args) {
     }
 }
 }
+
+
+
+
+
+// Unchecked 
+
+import java.util.Scanner; 
+class ScoreException extends RuntimeException{
+    ScoreException(){
+        System.out.println("Invalid score");
+    } 
+}
+class GradeException extends RuntimeException {
+    GradeException(String t){
+        System.out.println(t);
+    }
+}
+class ScoreGradeTest { 
+    int reg_no; 
+    int[] score = new int[3]; 
+    char grade;
+    Scanner input = new Scanner(System.in);
+    ScoreGradeTest(int t){ 
+        this.reg_no=t;
+    }
+    void set()throws ScoreException,GradeException{
+        for (int i=0;i<3;i++){
+            score[i]=input.nextInt(); 
+            if (score[i] > 100 || score[i] < 0) throw new ScoreException();
+        } 
+        grade=input.next().charAt(0);
+        if (grade=='A') {} 
+        else if(grade=='B'){} 
+        else if (grade=='C'){} 
+        else if (grade=='D'){} 
+        else if (grade=='F'){} 
+        else {
+            throw new GradeException("Invalid Grade");
+        }
+}
+int total;
+void check_grade() throws GradeException{
+    total=(score[0]+score[1]+score[2])/3; 
+    char calc_grade='F'; 
+    if (total>=90 && total<100){
+        calc_grade='A';
+    }
+    else if (total>=80 && total<90){
+            calc_grade='B';
+    }
+    else if (total>=70 && total<80){
+        calc_grade='C';
+    }
+    else if (total>=60 && total<70){
+        calc_grade='D';
+    }
+    else if (total<60){ 
+        calc_grade='F';
+    }
+    if (calc_grade ==grade){
+        System.out.println("entered data is successfully verified and saved");
+    } 
+    else
+    throw new GradeException("Grade entered by user is wrong");
+}
+void display(){
+    System.out.println("Student details: /n Student id : "+ reg_no);
+    System.out.println(" Marks :"+score[0]+" "+score[1]+" "+score[2]);
+    System.out.println("Grade : "+ grade);
+}
+public static void main(String[] args) {
+    try{
+        ScoreGradeTest stud1=new ScoreGradeTest(500); 
+        System.out.println("Enter student1 Details : "); 
+        stud1.set(); 
+        stud1.check_grade();
+        stud1.display();
+        
+        ScoreGradeTest stud2=new ScoreGradeTest(501); 
+        System.out.println("Enter student2 Details : "); 
+        stud2.set(); 
+        stud2.check_grade();
+        stud2.display();
+        
+        ScoreGradeTest stud3 =new ScoreGradeTest(502);
+        System.out.println("Enter student3 Details : "); 
+        stud3.set(); 
+        stud3.check_grade(); 
+        stud3.display();
+        
+        ScoreGradeTest stud4 =new ScoreGradeTest(503); 
+        System.out.println("Enter student4 Details : "); 
+        stud4.set(); 
+        stud4.check_grade(); 
+        stud4.display();
+        
+        ScoreGradeTest stud5 =new ScoreGradeTest(504); 
+        System.out.println("Enter student5 Details : "); 
+        stud5.set();
+        stud5.check_grade();
+        stud5.display();
+    }
+    catch(Exception e){ 
+        System.out.println(e);
+    }
+}
+}

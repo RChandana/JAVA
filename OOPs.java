@@ -373,6 +373,18 @@ public class TestInterruptingThread4 extends Thread{
 
 
 
+//
+class SetPriority{
+	public static void main(String[] args){
+		System.out.println("Before setting Priority of Main thread is " +
+			Thread.currentThread().getPriority());
+		Thread.currentThread().setPriority(6);
+		System.out.println(" After setting Priority of Main thread is " +
+			Thread.currentThread().getPriority());
+	}
+}
+
+
 
 
 

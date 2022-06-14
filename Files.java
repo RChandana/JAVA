@@ -20,4 +20,24 @@ class HelloWorld {
 }
 
 
-//
+// Read the text from a file and write the same in another one.
+
+import java.io.*;
+import java.util.*;
+class X{
+    public static void main(String args[]) throws Exception{
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Provide source file name : ");
+        String file_1 = sc.next();
+        
+        FileReader fin = new FileReader(file_1);
+        FileWriter fout = new FileWriter(file_2, true);
+        int x;
+        while((x = fin.read()) != -1){
+            fout.write(x);
+        }
+        System.out.println("Done");
+        fin.close();
+        fout.close();
+    }
+}

@@ -60,12 +60,12 @@ public class DataRefactorer{
                     for(int i = 0; i < tokenList.size(); i++){
                         String finalToken = tokenList.get(i);
                         writer.write(finalToken);
-                       
-                      /* Commenting the if condition because there will be droneFound = 1 or 0(in case of not_a_drone) suffixed after the comma as the last column
+                        /* Commenting the if condition because there will be droneFound = 1 or 0(in case of not_a_drone) suffixed after the comma as the last column
                         
                         if(i < tokenList.size() - 1){
                             writer.write(", ");
-                        }*/
+                        }
+                        */
                     }
                     if(rowCount == 1){
                         writer.write("Drone Found");
@@ -89,5 +89,14 @@ public class DataRefactorer{
                 e.printStackTrace();
             }
         }
+    }
+    static int getTrackIdFromLine(String line){
+        int retVal = 0;
+        int startIndex = line.indexOf('[');
+        int endndex = line.indexOf(']');
+        if(StartIndex != -1 &&endIndex != -1){
+            String trackId = line.subString(startIndex retVal = Integer.parseInt(trackId); +1, endIndex);
+        }
+        return retVal;
     }
 }

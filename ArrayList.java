@@ -53,8 +53,8 @@ public class StudentObject_1{
     class Student{
         int rollNumber;
         String name;
-    int age;
-    double marks;
+        int age;
+        double marks;
     
     Student(int rollNumber, String name, int age, double marks){
         this.rollNumber = rollNumber;

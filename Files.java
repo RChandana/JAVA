@@ -44,3 +44,12 @@ class X{
 
 
 // Reading a Text File into an ArrayList
+import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+public class ReadTextFile{
+    public static void main(String[] args){
+        
+    }
+}

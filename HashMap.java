@@ -24,3 +24,10 @@ public class StudentHashMap{
         while((line = br.readLine()) != null){
             sb.append(line);
             sb.append("\n");
+            
+            String[] elements = line.split(", ");
+            
+            String roll = elements[0].trim();
+            String name = elements[1].trim();
+            String age = elements[2].trim();
+            String marks = elements[3].trim();

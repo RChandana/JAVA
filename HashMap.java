@@ -31,3 +31,9 @@ public class StudentHashMap{
             String name = elements[1].trim();
             String age = elements[2].trim();
             String marks = elements[3].trim();
+           
+            Map<String, String> studentDetailsMap = new HashMap<>();
+            studentDetailsMap.put("Roll", roll);
+            studentDetailsMap.put("Name", name);
+            studentDetailsMap.put("Age", age);
+            studentDetailsMap.put("Marks", marks);

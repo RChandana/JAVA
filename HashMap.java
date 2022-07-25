@@ -37,3 +37,12 @@ public class StudentHashMap{
             studentDetailsMap.put("Name", name);
             studentDetailsMap.put("Age", age);
             studentDetailsMap.put("Marks", marks);
+            
+            studentArrayList.add(studentDetailsMap);
+        }
+        br.close();
+        for(Map map : studentArrayList){
+            System.out.println(map);
+        }
+    }
+}

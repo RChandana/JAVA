@@ -41,3 +41,6 @@ class X{
         fout.close();
     }
 }
+
+
+// Reading a Text File into an ArrayList

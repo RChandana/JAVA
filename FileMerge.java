@@ -27,4 +27,3 @@ public class FileMerge{
         System.out.println("Merged");
     }
 }
-

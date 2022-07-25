@@ -14,3 +14,13 @@ import java.util.Map;
 import java.util.HashMap;
 import java.io.BufferedReader;
 import java.io.FileReader;
+
+public class StudentHashMap{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new File Reader("FilePath.txt"));
+        StringBuffer sb = new StringBuffer();
+        List<Map> studentArrayList = new ArrayList<>();
+        String line;
+        while((line = br.readLine()) != null){
+            sb.append(line);
+            sb.append("\n");

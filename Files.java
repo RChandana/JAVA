@@ -50,6 +50,13 @@ import java.io.FileReader;
 
 public class ReadTextFile{
     public static void main(String[] args){
-        
+        BufferedReader br = new BufferedReader(new FileReader("TextFile_Path.txt"));
+        ArrayList<String> text = new ArrayList<>();
+        String line = br.readLine();
+        while(line != null){
+            text.add(line);
+            line = br.readLine();
+        }
+        br.close();
     }
 }

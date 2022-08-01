@@ -90,3 +90,10 @@ public class StudentHashMap{
             
             Map<String, String> studentDetailsMap = new HashMap<>();
             studentArrayList.add(studentDetailsMap);
+        }
+        br.close();
+        for(Map map : studentArrayList){
+            System.out.println(map);
+        }
+    }
+}

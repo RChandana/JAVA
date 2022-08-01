@@ -62,3 +62,5 @@ public class StudentHashMap{
     
     Create a text file with the above data and write a Java Program to read from the text file from each line and store it in a HashMap
     Now use an ArrayList to get the student details from each Map.*/
+   
+   

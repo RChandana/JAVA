@@ -76,3 +76,10 @@ public class StudentHashMap{
         String buffer sb = new StringBuffer();
         List<Map> studentArrayList = new ArrayList<>();
         String line;
+        
+       while((line = br.readLine()) != null){
+            sb.append(line);
+            sb.append("\n");
+            
+            String[] elements = line.split(", ");
+            

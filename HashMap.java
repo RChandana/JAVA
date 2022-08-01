@@ -70,3 +70,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.io.BufferedReader;
 import java.io.FileReader;
+public class StudentHashMap{
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new FileReader("FilePath.txt"));
+        String buffer sb = new StringBuffer();
+        List<Map> studentArrayList = new ArrayList<>();
+        String line;

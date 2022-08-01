@@ -82,4 +82,11 @@ public class StudentHashMap{
             sb.append("\n");
             
             String[] elements = line.split(", ");
+          
+            String rollNo = elements[0];
+            String name = elements[1];
+            String age = elements[2];
+            String marks = elements[3];
             
+            Map<String, String> studentDetailsMap = new HashMap<>();
+            studentArrayList.add(studentDetailsMap);

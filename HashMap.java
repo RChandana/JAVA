@@ -46,3 +46,18 @@ public class StudentHashMap{
         }
     }
 }
+
+
+
+
+
+/*RollNo    Name     Age    Marks
+   101    Chandana   18      90
+    .         .       .       .
+    .         .       .       .
+    .         .       .       .
+    .         .       .       .
+    .         .       .       .
+    .         .       .       .
+    
+    

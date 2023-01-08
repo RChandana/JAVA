@@ -6,7 +6,6 @@ public class FileMerge{
         PrintWriter pw = new PrintWriter("OutputFile_Path.txt");
         BufferedReder br1 = new BufferedReader(new FileReder("file1_path.txt"));
         BufferedReader br2 = new BufferedReader(new FileReader("file2_path.txt"));
-        
         String line1 = br1.readLine();
         String line2 = br2.readLine();
         

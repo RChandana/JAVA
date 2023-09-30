@@ -1,3 +1,5 @@
+// QUESTION : Given a square matrix, calculate the absolute difference between the sums of its diagonals.
+
 import java.util.Scanner;
 public class Diagonal_Matrix {
     public static void main(String[] args) {
